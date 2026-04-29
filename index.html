@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0a0a0e">
+<meta name="format-detection" content="telephone=no">
+<title>ChatStory</title>
+<link rel="stylesheet" href="style.css?v=8">
+<style>
+body { background: var(--bg); }
+
+.home-hero {
+  width: 100%; max-width: 430px;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.hero-img {
+  position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80') center/cover no-repeat;
+  filter: brightness(.28) saturate(.7);
+}
+.hero-tint {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(212,132,90,.12), rgba(123,158,201,.08));
+}
+.hero-bottom {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 140px;
+  background: linear-gradient(to top, var(--bg), transparent);
+}
+.hero-text {
+  position: absolute; bottom: 24px; left: 24px; right: 24px;
+}
+.hero-eyebrow {
+  font-family: var(--mono); font-size: 9px;
+  letter-spacing: .22em; color: rgba(255,255,255,.35);
+  text-transform: uppercase; margin-bottom: 8px;
+  border-left: 2px solid #d4845a; padding-left: 8px;
+}
+.hero-title {
+  font-size: 32px; font-weight: 600;
+  letter-spacing: -.04em; line-height: 1;
+  color: var(--fog);
+}
+.hero-title em { color: #d4845a; font-style: normal; }
+
+.section-label {
+  width: 100%; max-width: 430px;
+  padding: 24px 20px 10px;
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: .16em; color: var(--ghost);
+  text-transform: uppercase;
+}
+
+.episode-list {
+  width: 100%; max-width: 430px;
+  padding: 0 16px 80px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+
+.ep-card {
+  background: var(--ink);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 16px;
+  padding: 16px 18px;
+  display: flex; align-items: center; gap: 14px;
+  cursor: pointer;
+  transition: all .2s;
+  position: relative; overflow: hidden;
+  text-decoration: none;
+}
+.ep-card::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 3px;
+  border-radius: 3px 0 0 3px;
+}
+.ep-card:hover:not(.locked) {
+  background: var(--ink2);
+  border-color: rgba(255,255,255,.14);
+  transform: translateX(3px);
+}
+.ep-card.locked { opacity: .38; cursor: default; }
+
+.ep-num {
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: .1em; flex-shrink: 0;
+  min-width: 28px;
+}
+.ep-info { flex: 1; }
+.ep-title { font-size: 15px; font-weight: 500; letter-spacing: -.02em; color: var(--fog); }
+.ep-desc  { font-size: 12px; color: var(--smoke); margin-top: 2px; line-height: 1.4; }
+
+.ep-badge {
+  font-family: var(--mono); font-size: 9px;
+  letter-spacing: .07em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 20px; flex-shrink: 0;
+}
+.badge-new   { background: rgba(212,132,90,.15); color: #d4845a; border: 1px solid rgba(212,132,90,.25); }
+.badge-done  { background: rgba(74,222,128,.1);  color: #4ade80; border: 1px solid rgba(74,222,128,.2); }
+.badge-lock  { background: rgba(255,255,255,.05); color: var(--ghost); border: 1px solid rgba(255,255,255,.08); }
+
+/* bottom nav stub */
+.bottom-nav {
+  position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 100%; max-width: 430px;
+  background: rgba(15,15,19,.96); backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255,255,255,.06);
+  padding: 10px 0 20px;
+  display: flex; justify-content: space-around;
+  z-index: 100;
+}
+.nav-item {
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  font-family: var(--mono); font-size: 9px; color: var(--ghost);
+  letter-spacing: .06em; text-transform: uppercase;
+  cursor: pointer; transition: color .2s;
+}
+.nav-item.active { color: #d4845a; }
+.nav-ico { font-size: 18px; }
+</style>
+</head>
+<body>
+
+<div style="width:100%;max-width:430px;display:flex;flex-direction:column;align-items:center;min-height:100vh">
+
+  <!-- HERO -->
+  <div class="home-hero">
+    <div class="hero-img"></div>
+    <div class="hero-tint"></div>
+    <div class="hero-bottom"></div>
+    <div class="hero-text">
+      <div class="hero-eyebrow">ChatStory · Season 1</div>
+      <div class="hero-title">Are You<br><em>Sure?</em></div>
+    </div>
+  </div>
+
+  <!-- EPISODES -->
+  <div class="section-label">Episodes</div>
+
+  <div class="episode-list">
+
+    <a class="ep-card" href="episodes/ep01/index.html" style="--ep-color:#d4845a">
+      <div class="ep-card__before" style="position:absolute;left:0;top:0;bottom:0;width:3px;background:#d4845a;border-radius:3px 0 0 3px"></div>
+      <div class="ep-num" style="color:#d4845a">EP 01</div>
+      <div class="ep-info">
+        <div class="ep-title">He's Just Busy</div>
+        <div class="ep-desc">Zoe notices something. Lena sends a photo.</div>
+      </div>
+      <div class="ep-badge badge-done">Done</div>
+    </a>
+
+    <a class="ep-card" href="episodes/ep02/index.html" style="--ep-color:#d4845a">
+      <div class="ep-card__before" style="position:absolute;left:0;top:0;bottom:0;width:3px;background:#d4845a;border-radius:3px 0 0 3px"></div>
+      <div class="ep-num" style="color:#d4845a">EP 02</div>
+      <div class="ep-info">
+        <div class="ep-title">Date</div>
+        <div class="ep-desc">Lena's first night out. A name almost surfaces.</div>
+      </div>
+      <div class="ep-badge badge-new">New</div>
+    </a>
+
+    <div class="ep-card locked">
+      <div class="ep-num" style="color:var(--ghost)">EP 03</div>
+      <div class="ep-info">
+        <div class="ep-title">Sara</div>
+        <div class="ep-desc">A name mentioned twice too many.</div>
+      </div>
+      <div class="ep-badge badge-lock">🔒</div>
+    </div>
+
+    <div class="ep-card locked">
+      <div class="ep-num" style="color:var(--ghost)">EP 04</div>
+      <div class="ep-info">
+        <div class="ep-title">Too Sweet</div>
+        <div class="ep-desc">He's trying harder. That should feel better.</div>
+      </div>
+      <div class="ep-badge badge-lock">🔒</div>
+    </div>
+
+    <div class="ep-card locked">
+      <div class="ep-num" style="color:var(--ghost)">EP 05</div>
+      <div class="ep-info">
+        <div class="ep-title">The Photo</div>
+        <div class="ep-desc">Something in the background. Look again.</div>
+      </div>
+      <div class="ep-badge badge-lock">🔒</div>
+    </div>
+
+    <div class="ep-card locked">
+      <div class="ep-num" style="color:var(--ghost)">EP 06</div>
+      <div class="ep-info">
+        <div class="ep-title">Business Trip</div>
+        <div class="ep-desc">Same city. Same weekend.</div>
+      </div>
+      <div class="ep-badge badge-lock">🔒</div>
+    </div>
+
+    <div class="ep-card locked">
+      <div class="ep-num" style="color:var(--ghost)">EP 07</div>
+      <div class="ep-info">
+        <div class="ep-title">Back Home</div>
+        <div class="ep-desc">He brought a gift. She almost believes it.</div>
+      </div>
+      <div class="ep-badge badge-lock">🔒</div>
+    </div>
+
+    <div class="ep-card locked">
+      <div class="ep-num" style="color:var(--ghost)">EP 08</div>
+      <div class="ep-info">
+        <div class="ep-title">Lena's Question</div>
+        <div class="ep-desc">A letter on his screen. One initial.</div>
+      </div>
+      <div class="ep-badge badge-lock">🔒</div>
+    </div>
+
+    <div class="ep-card locked">
+      <div class="ep-num" style="color:var(--ghost)">EP 09</div>
+      <div class="ep-info">
+        <div class="ep-title">Everything's Fine</div>
+        <div class="ep-desc">He explains. She apologizes. Something shifts.</div>
+      </div>
+      <div class="ep-badge badge-lock">🔒</div>
+    </div>
+
+    <div class="ep-card locked">
+      <div class="ep-num" style="color:var(--ghost)">EP 10</div>
+      <div class="ep-info">
+        <div class="ep-title">Screenshot</div>
+        <div class="ep-desc">Deleted before she could open it.</div>
+      </div>
+      <div class="ep-badge badge-lock">🔒</div>
+    </div>
+
+    <div class="ep-card locked">
+      <div class="ep-num" style="color:var(--ghost)">EP 11</div>
+      <div class="ep-info">
+        <div class="ep-title">Sara's DM</div>
+        <div class="ep-desc">"Hi. I think we have mutual friends."</div>
+      </div>
+      <div class="ep-badge badge-lock">🔒</div>
+    </div>
+
+    <div class="ep-card locked">
+      <div class="ep-num" style="color:var(--ghost)">EP 12</div>
+      <div class="ep-info">
+        <div class="ep-title">Don't Ask Me</div>
+        <div class="ep-desc">She asks. You answer. Or you don't.</div>
+      </div>
+      <div class="ep-badge badge-lock">🔒</div>
+    </div>
+
+    <div class="ep-card locked">
+      <div class="ep-num" style="color:var(--ghost)">EP 13</div>
+      <div class="ep-info">
+        <div class="ep-title">Last Clue</div>
+        <div class="ep-desc">The piece she was waiting for.</div>
+      </div>
+      <div class="ep-badge badge-lock">🔒</div>
+    </div>
+
+    <div class="ep-card locked">
+      <div class="ep-num" style="color:var(--ghost)">EP 14</div>
+      <div class="ep-info">
+        <div class="ep-title">I Knew</div>
+        <div class="ep-desc">One line. No reply.</div>
+      </div>
+      <div class="ep-badge badge-lock">🔒</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
+  <div class="nav-item active">
+    <span class="nav-ico">📖</span>
+    <span>Story</span>
+  </div>
+  <div class="nav-item">
+    <span class="nav-ico">👥</span>
+    <span>Cast</span>
+  </div>
+  <div class="nav-item">
+    <span class="nav-ico">⚙️</span>
+    <span>Settings</span>
+  </div>
+</div>
+
+</body>
+</html>
