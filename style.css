@@ -28,8 +28,11 @@ body {
   background: var(--bg);
   font-family: var(--font);
   color: var(--fog);
-  min-height: 100vh;
+  height: 100vh;
+  height: 100dvh;
+  margin: 0;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
@@ -51,8 +54,10 @@ body::after {
   max-width: 430px;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
+  height: 100dvh;
   position: relative;
+  overflow: hidden;
 }
 
 /* Mobile: 430px sınırını kaldır, tam ekran kullan */
@@ -400,7 +405,8 @@ body::after {
 
 /* ── CHOICE PANEL (bottom) — Coral vurgulu koyu ── */
 #choice-panel {
-  position: relative;
+  position: sticky;
+  bottom: 0;
   width: 100%;
   background: #15151a;
   border-top: 0.5px solid rgba(212,132,90,.4);
