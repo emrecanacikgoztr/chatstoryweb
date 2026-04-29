@@ -562,7 +562,8 @@ const ChatStory = (() => {
                 feed.appendChild(rEl); _rendered.push(rEl);
                 requestAnimationFrame(()=>requestAnimationFrame(()=>{
                   rEl.classList.add('show');
-                  rEl.scrollIntoView({behavior:'smooth', block:'nearest'});
+                  const sb = (replyData.t === 'photo' || replyData.t === 'ss') ? 'end' : 'nearest';
+                  rEl.scrollIntoView({behavior:'smooth', block: sb});
                 }));
                 if(_devMode) refreshDevHandlers();
                 runChain(ci+1);
@@ -610,7 +611,10 @@ const ChatStory = (() => {
     if(!el) return; // choice — handled by panel
     feed.appendChild(el); _rendered.push(el);
     requestAnimationFrame(()=>requestAnimationFrame(()=>{
-      el.classList.add('show'); el.scrollIntoView({behavior:'smooth',block:'nearest'});
+      el.classList.add('show');
+      // For photos, scroll so the whole image is visible (not cut off at top)
+      const scrollBlock = (m.t === 'photo' || m.t === 'ss') ? 'end' : 'nearest';
+      el.scrollIntoView({behavior:'smooth', block: scrollBlock});
     }));
     setProgress((_idx/_total)*100);
     if(m.t==='choice') return; // panel handles continuation

@@ -321,7 +321,7 @@ body::after {
 }
 
 /* ── PHOTO ── */
-.photo-outer { max-width: 88%; display: flex; flex-direction: column; gap: 4px; }
+.photo-outer { max-width: 72%; display: flex; flex-direction: column; gap: 4px; }
 .msg-row.right .photo-outer { align-items: flex-end; }
 
 .photo-card {
@@ -329,12 +329,16 @@ body::after {
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.08);
   cursor: pointer;
+  max-height: 360px;
 }
 .msg-row.right .photo-card {
   border-radius: var(--radius) 4px var(--radius) var(--radius);
 }
 .photo-card img {
-  width: 100%; height: auto;
+  width: 100%;
+  max-height: 360px;
+  height: auto;
+  object-fit: cover;
   display: block;
   transition: filter .3s;
 }
@@ -402,28 +406,18 @@ body::after {
   border-top: 0.5px solid rgba(212,132,90,.4);
   z-index: 200;
   flex-shrink: 0;
-  /* Always visible — empty state shows minimal placeholder, .show fills with options */
-  min-height: 70px;
-  transition: min-height .35s ease-out;
+  /* Always reserve space, no jump when options appear */
+  min-height: 100px;
+  transition: none;
 }
 #choice-panel-empty {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 18px 20px calc(env(safe-area-inset-bottom, 0) + 18px);
-  font-family: var(--mono);
-  font-size: 10px;
-  color: rgba(212,132,90,.4);
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  display: block;
+  height: 100px;
+  /* Reserves space but shows nothing */
 }
 #choice-panel-empty .send-icon { display: none; }
-#choice-panel-empty::before {
-  content: "okuyor...";
-}
 #choice-panel.show #choice-panel-empty { display: none; }
 #choice-panel.show {
-  min-height: 100px;
   pointer-events: all;
   animation: choice-panel-glow 0.6s ease-out;
 }
