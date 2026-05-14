@@ -150,7 +150,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "12:31", "txt": "Kahvaltı tezgahına bırakmış"},
 
-  {"t": "photo", "at": "12:31", "url": "s1e6_b_zoe_kahvalti_kart.jpg", "cap": ""},
+  {"t": "photo", "at": "12:31", "url": "../../_assets/episodes/ep06/images/s1e6_b_zoe_kahvalti_kart.jpg", "cap": ""},
 
   {"t": "msg", "f": "zoe", "at": "12:32", "txt": "\"Felaketler kadını, lütfen ben dönünceye kadar mutfağı yakma 🤍\""},
 
@@ -285,7 +285,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "21:40", "txt": "Story atmış"},
 
-  {"t": "photo", "at": "21:41", "url": "s1e6_c_sara_story.jpg", "cap": ""},
+  {"t": "photo", "at": "21:41", "url": "../../_assets/episodes/ep06/images/s1e6_c_sara_story.jpg", "cap": ""},
 
   {"t": "msg", "f": "zoe", "at": "21:42", "txt": "Bakın"},
 
@@ -343,7 +343,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "22:04", "txt": "Bir story koymuş"},
 
-  {"t": "photo", "at": "22:05", "url": "s1e6_c_ethan_post.jpg", "cap": ""},
+  {"t": "photo", "at": "22:05", "url": "../../_assets/episodes/ep06/images/s1e6_c_ethan_post.jpg", "cap": ""},
 
   {"t": "msg", "f": "zoe", "at": "22:06", "txt": "Ethan story atmış restoranda"},
 

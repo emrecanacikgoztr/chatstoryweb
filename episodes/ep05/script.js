@@ -93,7 +93,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "08:33", "txt": "Bakın halime"},
 
-  {"t": "photo", "at": "08:33", "url": "s1e5_a_zoe_morning.jpg", "cap": ""},
+  {"t": "photo", "at": "08:33", "url": "../../_assets/episodes/ep05/images/s1e5_a_zoe_morning.jpg", "cap": ""},
 
   {"t": "msg", "f": "lena", "at": "08:34", "txt": "Ya hep güzelsin sen"},
 
@@ -168,7 +168,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "13:18", "txt": "Ethan mesaj attı", "gap": true},
 
-  {"t": "photo", "at": "13:18", "url": "s1e5_b_ethan_dm.jpg", "cap": ""},
+  {"t": "photo", "at": "13:18", "url": "../../_assets/episodes/ep05/images/s1e5_b_ethan_dm.jpg", "cap": ""},
 
   {"t": "msg", "f": "lena", "at": "13:19", "txt": "Tatlı mesaj"},
 
@@ -233,7 +233,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "13:45", "txt": "Yeni arkadaşıma bakın"},
 
-  {"t": "photo", "at": "13:46", "url": "s1e5_b_dog.jpg", "cap": ""},
+  {"t": "photo", "at": "13:46", "url": "../../_assets/episodes/ep05/images/s1e5_b_dog.jpg", "cap": ""},
 
   {"t": "msg", "f": "lena", "at": "13:46", "txt": "Aaaa"},
 
@@ -326,7 +326,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "21:35", "txt": "HSC Bank'ta beraberler"},
 
-  {"t": "photo", "at": "21:35", "url": "s1e5_c_malik_story.jpg", "cap": ""},
+  {"t": "photo", "at": "21:35", "url": "../../_assets/episodes/ep05/images/s1e5_c_malik_story.jpg", "cap": ""},
 
   {"t": "msg", "f": "lena", "at": "21:36", "txt": "..."},
 

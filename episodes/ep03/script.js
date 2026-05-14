@@ -227,7 +227,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "lena", "at": "00:18", "txt": "İşte bu", "gap": true},
 
-  {"t": "photo", "f": "lena", "at": "00:18", "url": "s1e3_c_sara_profile.jpg", "cap": "İşte Sara"},
+  {"t": "photo", "f": "lena", "at": "00:18", "url": "../../_assets/episodes/ep03/images/s1e3_c_sara_profile.jpg", "cap": "İşte Sara"},
 
   {"t": "msg", "f": "zoe", "at": "00:19", "txt": "Hımm", "gap": true},
 
@@ -248,7 +248,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "lena", "at": "00:24", "txt": "Bak şuna", "gap": true},
 
-  {"t": "photo", "f": "lena", "at": "00:24", "url": "s1e3_c_sara_getaway.jpg", "cap": "Geçen hafta paylaşmış"},
+  {"t": "photo", "f": "lena", "at": "00:24", "url": "../../_assets/episodes/ep03/images/s1e3_c_sara_getaway.jpg", "cap": "Geçen hafta paylaşmış"},
 
   {"t": "msg", "f": "lena", "at": "00:25", "txt": "Konumu yok", "gap": true},
   {"t": "msg", "f": "lena", "at": "00:25", "txt": "\"Weekend reset\" demiş"},
@@ -262,7 +262,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "lena", "at": "00:26", "txt": "Bir de bu", "gap": true},
 
-  {"t": "photo", "f": "lena", "at": "00:26", "url": "s1e3_c_sara_outfit.jpg", "cap": "Outfit postu"},
+  {"t": "photo", "f": "lena", "at": "00:26", "url": "../../_assets/episodes/ep03/images/s1e3_c_sara_outfit.jpg", "cap": "Outfit postu"},
 
   {"t": "msg", "f": "lena", "at": "00:27", "txt": "\"Quiet luxury\" yazmış caption'da", "gap": true},
 
@@ -275,7 +275,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "lena", "at": "00:28", "txt": "Ve bu", "gap": true},
 
-  {"t": "photo", "f": "lena", "at": "00:28", "url": "s1e3_c_sara_nature.jpg", "cap": "Doğa yürüyüşü"},
+  {"t": "photo", "f": "lena", "at": "00:28", "url": "../../_assets/episodes/ep03/images/s1e3_c_sara_nature.jpg", "cap": "Doğa yürüyüşü"},
 
   {"t": "msg", "f": "lena", "at": "00:29", "txt": "\"Deep breaths only\" 😂", "gap": true},
 
@@ -301,7 +301,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "lena", "at": "00:31", "txt": "Bir tane daha var", "gap": true},
 
-  {"t": "photo", "f": "lena", "at": "00:31", "url": "s1e3_c_sara_hoodie.jpg", "cap": "Yeni paylaşım"},
+  {"t": "photo", "f": "lena", "at": "00:31", "url": "../../_assets/episodes/ep03/images/s1e3_c_sara_hoodie.jpg", "cap": "Yeni paylaşım"},
 
   {"t": "msg", "f": "zoe", "at": "00:32", "txt": "Aaa", "gap": true},
 
