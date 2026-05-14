@@ -1,0 +1,86 @@
+/**
+ * ChatStory — Episode 06 Config
+ * "Business Trip"
+ */
+
+const CONFIG = {
+
+  episode:   '06',
+  title:     'Business Trip',
+  accent:    '#a08fc9',
+  tint:      'radial-gradient(ellipse 90% 55% at 50% 0%, rgba(160,143,201,.06), transparent 70%)',
+
+  initialChannel: 'group',
+  channels: {
+    group: {
+      name:       'Zoe, Lena & Sen',
+      initial:    'G',
+      avatarBg:   'rgba(160,143,201,.18)',
+      color:      '#a08fc9',
+      bgTint:     'radial-gradient(ellipse 90% 55% at 50% 0%, rgba(160,143,201,.06), transparent 70%)',
+    },
+    zoe_dm: {
+      name:       'Zoe',
+      initial:    'Z',
+      avatar:     'zoe.jpg',
+      color:      '#7b9ec9',
+      bgTint:     'radial-gradient(ellipse 90% 55% at 50% 0%, rgba(123,158,201,.10), transparent 70%)',
+    },
+    lena_dm: {
+      name:       'Lena',
+      initial:    'L',
+      avatar:     'lena.jpg',
+      color:      '#888888',
+      bgTint:     'radial-gradient(ellipse 90% 55% at 50% 0%, rgba(255,255,255,.04), transparent 70%)',
+    },
+  },
+
+  chatName:      'Zoe, Lena & Sen',
+  chatAvatar:    'G',
+  chatAvatarBg:  'rgba(160,143,201,.18)',
+
+  ctaLabel:  '7. bölüme geç',
+  ctaSub:    '',
+  ctaHref:   '../../index.html',
+
+  characters: {
+
+    lena: {
+      name:     'Lena',
+      initial:  'L',
+      side:     'left',
+      color:    '#c9a86a',
+      bgColor:  'rgba(201,168,106,.15)',
+      bubbleBg: '#1c1814',
+      avatar:   'lena.jpg',
+    },
+
+    zoe: {
+      name:     'Zoe',
+      initial:  'Z',
+      side:     'left',
+      color:    '#7b9ec9',
+      bgColor:  'rgba(123,158,201,.15)',
+      bubbleBg: '#131820',
+      avatar:   'zoe.jpg',
+    },
+
+    you: {
+      name:     'sen',
+      initial:  'S',
+      side:     'right',
+      color:    '#a0c4a0',
+      bgColor:  'rgba(160,196,160,.15)',
+      bubbleBg: '#1a2e1a',
+      avatar:   null,
+    },
+
+  },
+
+  media: {
+    's1e6_b_zoe_kahvalti_kart.jpg': 'Ethan\'ın bıraktığı not — "To my disaster girl..."',
+    's1e6_c_sara_story.jpg':        'Sara Insta story — Zürih, "Weekend reset 🌿"',
+    's1e6_c_ethan_post.jpg':         'Ethan Insta story — restoran masası, eller',
+  },
+
+};

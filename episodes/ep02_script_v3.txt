@@ -1,0 +1,325 @@
+================================================================
+ChatStory — BÖLÜM 2: "Date" (v3 — temiz okuma)
+================================================================
+
+v2'deki tüm "// DEĞİŞİKLİK: ..." yorumları kaldırıldı.
+Senin yaptığın 4 değişiklik uygulandı (Sahne A içinde).
+Senin yorumların (örn. "// 2 tane foto gerek") korundu.
+
+Karar noktaları için ⚠ işaretli 2 blok en sonda duruyor:
+- Sahne D Seçim B son satırı
+- Sahne H cliffhanger
+
+================================================================
+GENEL BİLGİ
+================================================================
+
+BÖLÜM: 02 — "Date"
+ZAMAN: Cuma akşamı, Bölüm 1'den 1-2 gün sonra
+DALGA: YUKARI (↑)
+FOTO: 3 adet (lena_mirror, lena_final, zoe_window) + ayakkabı için 2 ek foto?
+SEÇİM: 7 adet
+
+================================================================
+SAHNE A — Öncesi (Lena hazırlanıyor)
+================================================================
+
+[19:22] Lena: kızlar
+[19:22] Lena: acil yardım
+[19:22] Lena: 40 dk sonra çıkıyorum
+[19:22] Lena: hâlâ ne giyeceğimi bilmiyorum
+[19:23] Zoe: LENAAA
+[19:23] Zoe: sakin ol kızım vakit var
+[19:23] Lena: yok vakit yok
+[19:23] Lena: iki elbise arasında kaldım
+[19:24] Lena 📷 lena_mirror.jpg — "hangisi??"   // not: 2 elbiseyi de giysin fotoğrafta
+[19:24] Zoe: ikisi de güzel ya
+[19:24] Lena: bana yardım et
+[19:25] Zoe: Hımm   // düşünüyormuş gibi emoji de koyabiliriz
+
+[SEÇİM @ 19:25]
+  A: lacivert olanı, daha sakin
+     → [19:25] Lena: lacivert
+     → [19:25] Lena: evet
+     → [19:26] Lena: Zoe sen ne düşünüyorsun?   // Zoe'ye de sorsun
+     → [19:26] Zoe: Lacivert daha asil durdu.
+  B: bordo olanı, daha iddialı
+     → [19:25] Lena: bordo
+     → [19:25] Lena: biraz cesur ama bu akşam görünmek istiyorum aslında
+     → [19:26] Lena: Bilemedim, Zoe sen ne diyorsun?
+     → [19:26] Zoe: bordo yanıyor   // emojiler ekleyelim, zoe'nin listesine emoji kullanımı ekleyebiliriz. ama abartı olmasın
+
+[19:27] Lena: tamam elbise tamam
+[19:27] Lena: şimdi ayakkabı
+[19:28] Lena: Spor ayakkabı mı, topuklu mu??   // 2 tane foto gerek
+
+[SEÇİM @ 19:28]
+  A: Spor ayakkabı
+     → [19:28] Lena: evet
+     → [19:29] Lena: bütün akşam yürüyeceğim
+     → [19:29] Lena: zaten orada park yeri yokmuş
+  B: topuklu, boyun uzasın
+     → [19:28] Lena: alex 1.85 demişti ya
+     → [19:29] Lena: topuklu ile ben de ona yaklaşayım
+     → [19:29] Lena: sırt ağrısını göze aldım
+
+[19:30] Lena: tamam son bir şey
+[19:30] Lena: minimal mi
+[19:30] Lena: yoksa büyük küpe mi
+
+[SEÇİM @ 19:31]
+  A: minimal, ince kolye
+     → [19:31] Lena: hafif olsun
+     → [19:31] Lena: abartıya gerek yok
+     → [19:32] Zoe: iyi seçim
+  B: büyük küpe, büyükannenden
+     → [19:31] Lena: o küpeler büyükannemden kalmıştı
+     → [19:32] Lena: şans getirirler bana
+     → [19:32] Zoe: 🥹
+
+[19:33] Lena: tamam
+[19:33] Lena 📷 lena_final.jpg — "bu nasıl??"
+[19:34] Zoe: LENAAA
+[19:34] Zoe: çok güzelsin
+[19:34] Lena: sağ ol
+[19:35] Lena: ben çıkıyorum
+[19:35] Lena: dua edin
+[19:35] Zoe: HAHHA alex hazır olsun sen gelirken
+
+================================================================
+SAHNE B — Zoe'den hoş bir şey
+================================================================
+
+[19:50] Zoe: ben de size bir şey anlatıcam ama
+[19:50] Zoe: lena taksideymiş sonra okur
+[19:51] Zoe: sana anlatıyım o zaman
+
+--- 8 saniye ---
+
+[19:51] Zoe: ethan bu sabah kahvaltı hazırladı
+[19:52] Zoe: erken uyandım ben
+[19:52] Zoe: normalde ben yaparım kahvaltıyı
+[19:52] Zoe: mutfağa girdiğimde masa hazırdı
+[19:52] Zoe: çay demlenmiş
+[19:52] Zoe: tabakta meyve kesmiş
+[19:53] Zoe: masaya çiçek koymuş bir de
+[19:53] Zoe: vazodakinden değil ha
+[19:53] Zoe: balkondan küçük bir tane koparmış
+[19:54] Zoe: "günün güzel geçsin" dedi
+
+[19:55] Zoe: bu adam bazen çok tatlı ya
+
+[SEÇİM @ 19:56]
+  A: bunu hak ediyorsun zoe
+     → [19:56] Zoe: teşekkürler
+     → [19:56] Zoe: bugün içim rahat
+     → [19:57] Zoe: son günlerimdeki o his gitmiş gibi
+  B: güzel, şu ara çok mu tatlı?
+     → [19:56] Zoe: ya
+     → [19:57] Zoe: niye bu kadar şüpheleniyorum kendimden
+     → [19:57] Zoe: öyle düşünmek bile istemiyorum
+
+[19:58] Zoe: neyse
+[19:58] Zoe: lena'dan haber yok
+[19:58] Zoe: sabredelim
+
+================================================================
+SAHNE C — Lena buluşmaya geldi
+================================================================
+
+--- 20 dakika ---
+
+[20:18] Lena: geldim
+[20:18] Lena: o henüz gelmedi
+[20:19] Lena: biraz erken gelmişim
+[20:20] Lena: menüyü incelemeye başladım
+[20:20] Zoe: sakin ol kızım
+[20:20] Zoe: telefonla oyalan
+[20:21] Lena: oyalıyorum zaten sizin mesajlara bakıyorum
+[20:21] Lena: dur
+
+--- 4 dakika ---
+
+[20:25] Lena: geldi
+[20:25] Lena: sarıldık
+[20:26] Lena: sonra yazarım
+
+================================================================
+SAHNE D — Zoe evde
+================================================================
+
+--- 25 dakika ---
+
+[20:51] Zoe: sen oradasın hâlâ
+[20:51] Zoe: ben kendi akşamımı anlatayım
+[20:52] Zoe: ethan'la yemek yedik evde
+[20:52] Zoe: basit bir şey yaptık
+[20:53] Zoe: şimdi kanepedeyim
+[20:53] Zoe: ethan tv'yi açtı
+[20:53] Zoe: hani sana geçen gün bahsettiğim o belgesel vardı ya
+[20:54] Zoe: antarktika olan
+[20:54] Zoe: geçen hafta söylemiştim bir kere
+[20:55] Zoe: onu açtı
+[20:55] Zoe: hatırlamış ya
+
+[20:56] Zoe 📷 zoe_window.jpg — "böyle bir akşam 🥹"
+[20:56] Zoe: battaniyeyi de üzerime örttü
+
+[SEÇİM @ 20:57]
+  A: iyi bir akşam geçir, tadını çıkar
+     → [20:57] Zoe: çıkarıyorum
+     → [20:58] Zoe: uzun zamandır böyle hissetmemiştim
+     → [20:58] Zoe: basit bir akşam ama iyi geldi
+  B: hatırlaması güzel ama bilmiyorum
+     → [20:57] Zoe: ne yani hatırlamasın mı
+     → [20:58] Zoe: adam bana belgesel açtı
+     → [20:58] Zoe: şüpheci olmak istemiyorum
+     // ⚠ KARAR: v1'de burada 4. satır vardı: "seni özledim biraz sıkıntılı
+     // olmayalım bu akşam". Şu an silinmiş durumda. En sonda ⚠ bloğunda
+     // detaylı konuşacağız.
+
+[21:00] Zoe: lena'dan haber aldın mı
+[21:00] Zoe: ben gruba bakmıyorum ama merak ettim
+
+================================================================
+SAHNE E — Lena arada mesaj (paralel)
+================================================================
+
+--- 18 dakika ---
+
+[21:18] Lena: tuvaletteyim 2 dk
+[21:18] Lena: çok iyi gidiyor
+[21:19] Lena: alex gerçekten güzel biri
+[21:19] Zoe: DETAY LENA
+[21:19] Zoe: DETAY
+[21:20] Lena: komik
+[21:20] Lena: dinliyor
+[21:20] Lena: gözlerimin içine bakıyor
+[21:21] Lena: ben çok konuşuyorum sanırım ama sorular soruyor
+
+--- 35 saniye ---
+
+[21:21] Lena: dönüyorum
+[21:22] Lena: sonra yazarım
+
+--- 18 dakika ---
+
+[21:40] Lena: bir şey daha
+[21:41] Lena: ortak bir arkadaşımız varmış
+[21:41] Lena: konuşunca çıktı
+[21:41] Lena: hem de iş ortağı şu an
+[21:42] Lena: bir firmadan bahsetti
+[21:42] Lena: ismi aklımda kalmadı
+[21:42] Lena: ama tanıdık geldi
+
+[SEÇİM @ 21:43]
+  A: ne firması lena, sor tekrar
+     → [21:43] Lena: soracağım
+     → [21:44] Lena: finans sektöründeymiş
+     → [21:44] Lena: "iyi bir yerde çalışıyor" dedi
+     → [21:44] Lena: ismini sormadım, konuyu dağıtmak istemedim
+     → [21:45] Zoe: finans mı
+     → [21:45] Zoe: ethan da finansta
+     → [21:45] Lena: istanbul'da finanstaki herkes birbirini tanır zaten
+  B: tadını çıkar, detay sonra
+     → [21:43] Lena: tamam
+     → [21:44] Lena: o da masaya geldi zaten
+     → [21:44] Lena: yazarım sonra
+     → [21:45] Lena: ha bir de ortak bir arkadaşımız var aklımda tutayım
+     // NOT: Bu son satır v1'de yoktu, süreklilik için eklendi. B yolunda da
+     // Bölüm 3'ün Sara name-drop'u için zemin kalsın diye.
+
+[21:46] Lena: geldi
+[21:46] Lena: sonra yazarım
+
+================================================================
+SAHNE G — Lena döndü
+================================================================
+
+--- saatler geçiyor ---
+
+[23:02] Lena: döndüm
+[23:02] Lena: kızlar
+[23:03] Lena: çok iyiydi
+[23:03] Zoe: ANLAT HEMEN
+[23:03] Zoe: merak içindeyim
+[23:04] Lena: nereden başlasam
+[23:04] Lena: komik ya
+[23:05] Lena: espri anlayışım onunkiyle uyuyor
+[23:05] Lena: çok güldüm
+[23:06] Lena: ve dinliyor zoe
+[23:06] Lena: ben anlatıyorum, sorular soruyor
+[23:06] Lena: sonra kendinden anlatıyor
+[23:07] Lena: yürürken bile rahattım
+[23:07] Lena: biliyorsun ilk buluşmalarda kasarım ben
+
+[23:08] Lena: heyecanlandım
+[23:08] Lena: ama kendimi kaptırmamaya çalışıyorum
+
+[SEÇİM @ 23:09]
+  A: bırak kendini lena, güzel bir şey yaşıyorsun
+     → [23:09] Lena: biliyorum
+     → [23:10] Lena: ama hep eski yerlerime çekiliyorum
+     → [23:10] Lena: bir parçam "fazla heyecanlanma" diyor
+     → [23:11] Lena: bakalım
+  B: temkinli olman da güzel, tanışma süreci uzun
+     → [23:09] Lena: beni tanıyorsunuz
+     → [23:10] Lena: fazla umutlanmak istemiyorum
+     → [23:10] Lena: önce ben alışayım
+     → [23:11] Zoe: akıllıca
+
+[23:12] Lena: bir şey daha var
+[23:12] Lena: söylemem gerek
+[23:13] Lena: alex'in bir hikayesi var
+[23:13] Lena: eski bir ilişki
+[23:13] Lena: tam anlatmadı
+[23:14] Lena: ama sohbet o tarafa gitti bir an
+[23:14] Lena: sonra geri çekti
+[23:14] Lena: "uzun bir konu, sonra" dedi
+[23:15] Zoe: zamanla anlatır
+[23:15] Lena: umarım
+[23:15] Lena: ben de kendiminkileri anlatacağım nasıl olsa
+
+================================================================
+SAHNE H — Gece kapanışı
+================================================================
+
+[23:30] Zoe: güzel bir akşamdı kızlar
+[23:30] Zoe: hepimiz için
+[23:31] Lena: siz de iyi ki varsınız
+[23:31] Lena: yalnız olsam bunları tadamazdım
+[23:32] Zoe: biz de 🧡
+[23:32] Lena: iyi geceler
+[23:33] Zoe: iyi geceler lena
+[23:33] Zoe: iyi geceler sana da
+
+--- ekran kararır ---
+// ⚠ KARAR: Cliffhanger. En sonda konuşacağız.
+
+================================================================
+BÖLÜM SONU
+================================================================
+
+================================================================
+AÇIK KARAR NOKTALARI
+================================================================
+
+⚠ [A] — Sahne D Seçim B, 4. satır
+   Orijinal (v1): "seni özledim biraz sıkıntılı olmayalım bu akşam"
+   Şu an: SİLİNMİŞ
+   Seçenekler: silinmiş kalsın / aynen geri gelsin / revize edilip gelsin
+   → En sonda konuşacağız.
+
+⚠ [B] — Sahne H cliffhanger
+   Şu an: boş (sakin "iyi geceler" kapanışı)
+   Seçenekler: boş kalsın / Zoe ipucu hatırlasın / Ethan'dan screenshot /
+              Lena'nın son mesajı
+   → En sonda konuşacağız.
+
+⚠ [C] — Elbise seçim akışı (sen Sahne A'da değiştirdin)
+   Senin yeni akışın: YOU seçim yapıyor → Lena Zoe'ye soruyor → Zoe
+   karar veriyor. Bu güzel bir yapı AMA YOU'nun seçimi geri-bağlanmıyor.
+   Oyuncu "lacivert" dedi, Zoe de "lacivert" dedi. "bordo" dedi, Zoe
+   de "bordo". Fakat YOU'nun sözü görünmüyor — Zoe zaten onaylıyor.
+   Seçenekler: böyle kalsın / Lena YOU'ya da dönsün / başka çözüm
+   → Bunu da en sonda konuşacağız.

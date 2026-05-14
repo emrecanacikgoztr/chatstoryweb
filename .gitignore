@@ -1,0 +1,17 @@
+# Pipeline — web'e gitmez
+_tools/
+
+# Yazı / doc dosyaları
+_writing/
+_docs_v2_yeni_konsolidasyon/
+character_bible.docx
+MIGRATION_NOTES.md
+episode_notes.md
+turkish_style_guide.md
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Archives
+*.zip

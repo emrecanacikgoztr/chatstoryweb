@@ -1,0 +1,87 @@
+/**
+ * ChatStory — Episode 05 Config
+ * "The Photo"
+ */
+
+const CONFIG = {
+
+  episode:   '05',
+  title:     'The Photo',
+  accent:    '#7b9ec9',
+  tint:      'radial-gradient(ellipse 90% 55% at 50% 0%, rgba(123,158,201,.06), transparent 70%)',
+
+  initialChannel: 'group',
+  channels: {
+    group: {
+      name:       'Zoe, Lena & Sen',
+      initial:    'G',
+      avatarBg:   'rgba(123,158,201,.18)',
+      color:      '#7b9ec9',
+      bgTint:     'radial-gradient(ellipse 90% 55% at 50% 0%, rgba(123,158,201,.06), transparent 70%)',
+    },
+    zoe_dm: {
+      name:       'Zoe',
+      initial:    'Z',
+      avatar:     'zoe.jpg',
+      color:      '#7b9ec9',
+      bgTint:     'radial-gradient(ellipse 90% 55% at 50% 0%, rgba(123,158,201,.10), transparent 70%)',
+    },
+    lena_dm: {
+      name:       'Lena',
+      initial:    'L',
+      avatar:     'lena.jpg',
+      color:      '#888888',
+      bgTint:     'radial-gradient(ellipse 90% 55% at 50% 0%, rgba(255,255,255,.04), transparent 70%)',
+    },
+  },
+
+  chatName:      'Zoe, Lena & Sen',
+  chatAvatar:    'G',
+  chatAvatarBg:  'rgba(123,158,201,.18)',
+
+  ctaLabel:  '6. bölüme geç',
+  ctaSub:    '',
+  ctaHref:   '../../index.html',
+
+  characters: {
+
+    lena: {
+      name:     'Lena',
+      initial:  'L',
+      side:     'left',
+      color:    '#c9a86a',
+      bgColor:  'rgba(201,168,106,.15)',
+      bubbleBg: '#1c1814',
+      avatar:   'lena.jpg',
+    },
+
+    zoe: {
+      name:     'Zoe',
+      initial:  'Z',
+      side:     'left',
+      color:    '#7b9ec9',
+      bgColor:  'rgba(123,158,201,.15)',
+      bubbleBg: '#131820',
+      avatar:   'zoe.jpg',
+    },
+
+    you: {
+      name:     'sen',
+      initial:  'S',
+      side:     'right',
+      color:    '#a0c4a0',
+      bgColor:  'rgba(160,196,160,.15)',
+      bubbleBg: '#1a2e1a',
+      avatar:   null,
+    },
+
+  },
+
+  media: {
+    's1e5_a_zoe_morning.jpg':   'Zoe sabah selfie — taksi, yorgun',
+    's1e5_b_ethan_dm.jpg':       'Ethan\'tan DM SS — "İyi misin? Bugün seni özledim."',
+    's1e5_b_dog.jpg':           'Köpek momenti — opsiyonel',
+    's1e5_c_malik_story.jpg':   'Malik Instagram story — Sara tagli',
+  },
+
+};

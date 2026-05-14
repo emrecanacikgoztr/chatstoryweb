@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>ChatStory — EP[XX] [TITLE]</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+<div class="status-bar" style="max-width:430px;width:100%">
+  <div class="sb-time" id="sb-time">9:41 AM</div>
+  <div class="sb-icons">▲▲▲ &nbsp; 🔋</div>
+</div>
+
+<div class="chat-header" style="max-width:430px;width:100%">
+  <div class="ch-back" onclick="window.location='../../index.html'">‹</div>
+  <div class="ch-avatar" id="ch-avatar">Z</div>
+  <div class="ch-info">
+    <div class="ch-name" id="ch-name">Zoe</div>
+    <div class="ch-status">
+      <span class="status-dot"></span>
+      <span id="ch-status-text">online</span>
+    </div>
+  </div>
+  <div class="ch-right">
+    <svg class="prog-ring" viewBox="0 0 30 30">
+      <circle class="ring-track" cx="15" cy="15" r="11"/>
+      <circle class="ring-fill" id="ring-fill" cx="15" cy="15" r="11"
+        stroke-dasharray="69.1" stroke-dashoffset="69.1"/>
+    </svg>
+    <div class="prog-pct" id="prog-pct">0%</div>
+  </div>
+</div>
+
+<div class="feed-tint" id="feed-tint"></div>
+<div class="feed" id="feed"></div>
+
+<div id="cta">
+  <button id="cta-btn">Next Episode →</button>
+  <div id="cta-sub">coming soon</div>
+</div>
+
+<div id="choice-panel">
+  <div id="choice-options"></div>
+</div>
+
+<div id="pause-pill">⏸ tap to continue</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+<script src="../../engine.js"></script>
+<script>
+  ChatStory.init(CONFIG, MESSAGES);
+  ChatStory.start();
+</script>
+
+</body>
+</html>

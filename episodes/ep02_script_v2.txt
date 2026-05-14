@@ -1,0 +1,462 @@
+================================================================
+ChatStory — BÖLÜM 2: "Date" (v2 — style guide pass)
+================================================================
+
+PASS NOTU: v1 taban alındı. Style guide v0.4 kuralları uygulandı.
+Her satırın sonundaki // DEĞİŞİKLİK: ... notu, v1'e göre yapılan değişikliği
+açıklıyor. // YENİ satırlar v1'de yoktu.
+Sen ya onaylıyorsun, ya değiştiriyorsun, ya siliyorsun.
+
+================================================================
+GENEL BİLGİ
+================================================================
+
+BÖLÜM: 02 — "Date"
+ZAMAN: Cuma akşamı, Bölüm 1'den 1-2 gün sonra
+DALGA: YUKARI (↑)
+FOTO: 3 adet (lena_mirror, lena_final, zoe_window)
+SEÇİM: 7 adet
+
+================================================================
+SAHNE A — Öncesi (Lena hazırlanıyor)
+================================================================
+
+[19:22] Lena: kızlar
+[19:22] Lena: acil yardım
+[19:22] Lena: 40 dk sonra çıkıyorum
+[19:22] Lena: hâlâ ne giyeceğimi bilmiyorum
+[19:23] Zoe: LENAAA
+[19:23] Zoe: sakin ol kızım vakit var
+[19:23] Lena: yok vakit yok
+[19:23] Lena: iki elbise arasında kaldım
+[19:24] Lena 📷 lena_mirror.jpg — "hangisi??"   // not: 2 elbiseyi de giysin fotoğrafta
+[19:24] Zoe: ikisi de güzel ya
+[19:24] Lena: bana yardım et
+// DEĞİŞİKLİK: "yardım etmen gerek" → "bana yardım et". v1'de soğuk/resmi tınlıyordu. Lena panikte, direkt istek daha doğal.
+[19:25] Zoe: hangisi sana daha çok benziyor
+
+// DEĞİŞİKLİK: "seninki hangisi içine yakın" → "hangisi sana daha çok benziyor".
+// v1'deki cümle biraz bozuk Türkçe, Zoe için bile ("içine yakın" "senin içine yakın" demek istiyor ama eksik). Düzelttim, Zoe tonu korundu.
+
+[SEÇİM @ 19:25]
+  A: lacivert olanı, daha sakin
+     → [19:25] Lena: lacivert
+     → [19:25] Lena: evet
+     → [19:26] Lena: onu giydiğimde kendime güveniyorum zaten
+     // DEĞİŞİKLİK: "aslında kendime güveniyorum bunda" → "onu giydiğimde kendime güveniyorum zaten". Orijinal biraz Google Translate hissiyatı veriyordu.
+     → [19:26] Zoe: o zaman lacivert
+     // DEĞİŞİKLİK: "kesin seçim o zaman" → "o zaman lacivert". Daha net, echo'luyor.
+  B: bordo olanı, daha iddialı
+     → [19:25] Lena: bordo
+     → [19:25] Lena: ben de ona meyilliydim aslında
+     // DEĞİŞİKLİK: "meylediyordum" → "meyilliydim". Daha konuşma dili.
+     → [19:26] Lena: biraz cesur ama bu akşam görünmek istiyorum
+     // DEĞİŞİKLİK: "kendimi göstermek istiyorum" → "görünmek istiyorum". Lena'ya daha uygun, kısa.
+     → [19:26] Zoe: hadi bakalım 🔥
+     // DEĞİŞİKLİK: Emoji eklemeyi düşündüm ama 🔥 Zoe'nin listesinde yok (style guide). SİLDİM, orijinal "hadi bakalım" kalsın.
+
+// DÜZELTME: B-son satırı şöyle kalsın:
+     → [19:26] Zoe: hadi bakalım
+
+[19:27] Lena: tamam elbise tamam
+[19:27] Lena: şimdi ayakkabı
+[19:28] Lena: sandalet mi topuklu mu
+
+[SEÇİM @ 19:28]
+  A: sandalet, rahat olursun
+     → [19:28] Lena: haklısın
+     // DEĞİŞİKLİK: "doğru" → "haklısın". "Doğru" Lena için biraz buz gibi, "haklısın" daha samimi.
+     → [19:29] Lena: bütün akşam yürüyeceğim
+     // DEĞİŞİKLİK: "yürümek kolay olsun" → "bütün akşam yürüyeceğim". Sebep-sonuç açıklıyor, Lena'ya uygun.
+     → [19:29] Lena: zaten orada park yeri yokmuş
+     // DEĞİŞİKLİK: "zaten restorana yakın otoparkım yok" → "zaten orada park yeri yokmuş". Daha kısa, WhatsApp tonu. "otoparkım yok" garipti (kimin otoparkı?).
+  B: topuklu, boyun uzasın
+     → [19:28] Lena: alex 1.85 demişti ya
+     // DEĞİŞİKLİK: "demiştim ya" → "demişti ya". v1'de Lena kendisi söylemiş gibi, ama aslında Alex'in boyu konuştuğumuz bilgi. Düzelt.
+     → [19:29] Lena: topuklu ile ben de ona yaklaşayım
+     → [19:29] Lena: sırt ağrısını göze aldım
+     // DEĞİŞİKLİK: "sırt ağrısı göze alınır" → "sırt ağrısını göze aldım". Edilgen → birinci şahıs, Lena'ya daha yakın.
+
+[19:30] Lena: tamam son bir şey
+[19:30] Lena: minimal mi
+[19:30] Lena: yoksa büyük küpe mi
+// DEĞİŞİKLİK: "minimal mi gitsem" → "minimal mi". Gereksiz kelime temizliği.
+
+[SEÇİM @ 19:31]
+  A: minimal, ince kolye
+     → [19:31] Lena: hafif olsun
+     → [19:31] Lena: abartıya gerek yok
+     // DEĞİŞİKLİK: "fazla abartı istemiyorum" → "abartıya gerek yok". Kısa, doğal.
+     → [19:32] Zoe: iyi seçim
+  B: büyük küpe, büyükannenden
+     → [19:31] Lena: o küpeler büyükannemden kalmıştı
+     // DEĞİŞİKLİK: "o küpe büyükannemindi" → "o küpeler büyükannemden kalmıştı". Küpe tek değil, çift. "kaldı" daha duygusal.
+     → [19:32] Lena: şans getirirler bana
+     // DEĞİŞİKLİK: "bana şans getireceğini düşünüyorum" → "şans getirirler bana". Kısa, Lena batıl inanç sahibi değil ama buna bugün inanmak istiyor — daha doğrudan söylesin.
+     → [19:32] Zoe: 🥹
+
+[19:33] Lena: tamam
+[19:33] Lena 📷 lena_final.jpg — "bu nasıl??"
+[19:34] Zoe: LENAAA
+[19:34] Zoe: çok güzelsin
+[19:34] Lena: sağ ol
+[19:35] Lena: ben çıkıyorum
+[19:35] Lena: dua edin
+[19:35] Zoe: HAHHA alex hazır olsun sen gelirken
+// KONTROL: Bu satır aynı kalıyor — Zoe'nin sesi doğru, "HAHHA" stil guide "kıkırdama" kategorisinde (bölüm 1'de de vardı).
+
+================================================================
+SAHNE B — Zoe'den hoş bir şey
+================================================================
+
+[19:50] Zoe: ben de size bir şey anlaticam ama
+// DEĞİŞİKLİK: "anlatıcam" → "anlaticam" (Zoe telefonda yazım hatası eğilimi) — ama bu tartışmalı. İstersen v1'deki "anlatıcam"a geri dönelim. Şimdilik ORİJİNAL KALSIN:
+[19:50] Zoe: ben de size bir şey anlatıcam ama
+
+[19:50] Zoe: lena taksideymiş sonra okur
+[19:51] Zoe: sana anlatıyım o zaman
+
+--- 8 saniye ---
+
+[19:51] Zoe: ethan bu sabah kahvaltı hazırladı
+[19:52] Zoe: erken uyandım ben
+// DEĞİŞİKLİK: "erken uyandım ben normalde ben yapıyorum" → iki mesaja böl
+[19:52] Zoe: normalde ben yaparım kahvaltıyı
+// DEĞİŞİKLİK (devam): v1'de tek mesaj, "ben yapıyorum" eksik özne. İkiye böldüm, anlam netleşti.
+
+[19:52] Zoe: mutfağa girdiğimde masa hazırdı
+[19:52] Zoe: çay demlenmiş
+[19:52] Zoe: tabakta meyve kesmiş
+[19:53] Zoe: masaya çiçek koymuş bir de
+// DEĞİŞİKLİK: "masaya bir çiçek koymuş" → "masaya çiçek koymuş bir de". "bir de" şaşkınlık vurgusu ekliyor, Zoe tonuna uygun.
+[19:53] Zoe: vazodakinden değil ha
+// DEĞİŞİKLİK: "vazomuzdaki değil, küçük bir çiçek" → "vazodakinden değil ha". İki bilgi vardı (vazodan değil + küçük) — "küçük" bir sonraki mesaja ayrılacak.
+[19:53] Zoe: balkondan küçük bir tane koparmış
+// DEĞİŞİKLİK: "balkondan almış" → "balkondan küçük bir tane koparmış". "Küçük" bilgisini buraya taşıdım, "koparmış" daha samimi.
+[19:54] Zoe: "günün güzel geçsin" dedi
+// KONTROL: Ethan'ın repliği Zoe'nin ağzından aktarıldığı için screenshot değil — bu style guide'a uygun. Ethan'ın direkt mesajı yok.
+// Ethan "sevgilim" demiyor bilinçli, style guide'a uygun.
+
+[19:55] Zoe: bu adam bazen çok tatlı ya
+
+[SEÇİM @ 19:56]
+  A: bunu hak ediyorsun zoe
+     → [19:56] Zoe: teşekkürler
+     → [19:56] Zoe: bugün içim rahat
+     → [19:57] Zoe: son günlerimdeki o his gitmiş gibi
+     // DEĞİŞİKLİK: "son günlerimdeki o his gitti sanki" → "son günlerimdeki o his gitmiş gibi". "Sanki" style guide "zaman zaman doldurucu" listesinde, "gibi" daha doğal.
+  B: güzel, şu ara çok mu tatlı?
+     → [19:56] Zoe: ya
+     → [19:57] Zoe: niye bu kadar şüpheleniyorum kendimden
+     // DEĞİŞİKLİK: "neden bu kadar şüpheleniyorum ben kendimden" → "niye bu kadar şüpheleniyorum kendimden". "Neden"→"niye" (Zoe daha konuşma dili), "ben" gereksiz (zaten özne belli).
+     → [19:57] Zoe: öyle düşünmek bile istemiyorum
+
+[19:58] Zoe: neyse
+[19:58] Zoe: lena'dan haber yok
+[19:58] Zoe: sabredelim
+// DEĞİŞİKLİK: "sabretmek gerek" → "sabredelim". Daha samimi, Zoe'nin YOU'ya dönüşü.
+
+================================================================
+SAHNE C — Lena buluşmaya geldi
+================================================================
+
+--- 20 dakika ---
+
+[20:18] Lena: geldim
+[20:18] Lena: o henüz gelmedi
+[20:19] Lena: biraz erken gelmişim
+// DEĞİŞİKLİK: "buraya biraz erken geldim galiba" → "biraz erken gelmişim". "Buraya" gereksiz, "galiba" → -mişli geçmiş zaten çıkarım içeriyor.
+[20:20] Lena: menüyü incelemeye başladım
+// DEĞİŞİKLİK: "menüyü incelemeye başladım bile" → "menüyü incelemeye başladım". "Bile" gereksiz (style guide).
+[20:20] Zoe: sakin ol kızım
+[20:20] Zoe: telefonla oyalan
+// DEĞİŞİKLİK: "telefonla oyala kendini" → "telefonla oyalan". "Kendini" gereksiz (dönüşlü).
+[20:21] Lena: oyalıyorum zaten sizin mesajlara bakıyorum
+// DEĞİŞİKLİK: "oynuyorum zaten sanadan bakıyorum" → "oyalıyorum zaten sizin mesajlara bakıyorum".
+// "Sanadan" açık tipo, "sizin" doğrusu. "Oynuyorum" → "oyalıyorum" (Zoe'nin dediği kelimeyi tekrarlıyor, daha akıllı cevap).
+[20:21] Lena: dur
+
+--- 4 dakika ---
+
+[20:25] Lena: geldi
+[20:25] Lena: sarıldık
+[20:26] Lena: sonra yazarım
+
+================================================================
+SAHNE D — Zoe evde
+================================================================
+
+--- 25 dakika ---
+
+[20:51] Zoe: sen oradasın hâlâ
+// DEĞİŞİKLİK: "sen oradasın" → "sen oradasın hâlâ". "Hâlâ" Zoe'nin Lena'nın süresini takip ettiğini gösteriyor, ufak ama güzel detay.
+[20:51] Zoe: ben kendi akşamımı anlatayım
+// DEĞİŞİKLİK: "ben de kendi akşamımı anlatıyım" → "ben kendi akşamımı anlatayım". "De" gereksiz (zaten bağlam belli), "anlatıyım" → "anlatayım" doğrusu.
+[20:52] Zoe: ethan'la yemek yedik evde
+// DEĞİŞİKLİK: "yemek yedik ethan'la" → "ethan'la yemek yedik evde". Kelime sırası Türkçeye daha uygun, "evde" eklendi (mekan bilgisi önemli).
+[20:52] Zoe: basit bir şey yaptık
+[20:53] Zoe: şimdi kanepedeyim
+[20:53] Zoe: ethan tv'yi açtı
+[20:53] Zoe: hani sana geçen gün bahsettiğim o belgesel vardı ya
+// DEĞİŞİKLİK: "geçen gün bahsettiğim o belgesel var ya" → "hani sana geçen gün bahsettiğim o belgesel vardı ya".
+// "Hani" hatırlatma, "sana" YOU'ya direkt referans (style guide'da olumlu işaret), "vardı" daha doğal.
+[20:54] Zoe: antarktika olan
+// DEĞİŞİKLİK: "hani antarktika olanı" → "antarktika olan". "Hani" bir önceki satırda, "olanı" → "olan".
+[20:54] Zoe: geçen hafta söylemiştim bir kere
+// DEĞİŞİKLİK: "geçen hafta söylemiştim" → "geçen hafta söylemiştim bir kere". "Bir kere" ekleme — Ethan'ın hatırlamasının özelliğini vurguluyor.
+[20:55] Zoe: onu açtı
+[20:55] Zoe: hatırlamış ya
+// DEĞİŞİKLİK: "hatırlamış" → "hatırlamış ya". "Ya" hayret/duygu vurgusu, Zoe tonu.
+
+[20:56] Zoe 📷 zoe_window.jpg — "böyle bir akşam 🥹"
+[20:56] Zoe: battaniyeyi de üzerime örttü
+// DEĞİŞİKLİK: "battaniye de getirdi üstüme" → "battaniyeyi de üzerime örttü". "Örtmek" daha tatlı hareket, "üzerime" → doğru.
+
+[SEÇİM @ 20:57]
+  A: iyi bir akşam geçir, tadını çıkar
+     → [20:57] Zoe: çıkarıyorum
+     → [20:58] Zoe: uzun zamandır böyle hissetmemiştim
+     // DEĞİŞİKLİK: "hissetmiyordum" → "hissetmemiştim". Zaman kip düzelt — olumsuz geçmiş hissi.
+     → [20:58] Zoe: basit bir akşam ama iyi geldi
+
+  B: hatırlaması güzel ama bilmiyorum
+     → [20:57] Zoe: ne yani hatırlamasın mı
+     // DEĞİŞİKLİK: "hatırlamaması mı gerekirdi" → "hatırlamasın mı". Daha kısa, Zoe'nin savunması daha doğal.
+     → [20:58] Zoe: adam bana belgesel açtı
+     → [20:58] Zoe: şüpheci olmak istemiyorum
+     // DEĞİŞİKLİK: "bu kadar şüpheci olmak istemiyorum" → "şüpheci olmak istemiyorum". "Bu kadar" gereksiz.
+
+     // ⚠ ÖNEMLİ KARAR NOKTASI — Sahne D Seçim B son satırı:
+     // v1: "seni özledim biraz sıkıntılı olmayalım bu akşam"
+     //
+     // Bu satır Zoe'nin YOU'ya söylediği bir "pasif agresif" replik. Sanki YOU
+     // "şüphelen" demiş gibi, Zoe de "sen neden beni karıştırıyorsun" diyor.
+     // İki problem:
+     //   1. Seçim YOU'nun tepkisiydi ("hatırlaması güzel ama bilmiyorum") —
+     //      Zoe'nin tam olarak tetiklenmesine yetecek kadar sert değildi.
+     //   2. Zoe-YOU ilişkisi B1'de çok samimi kuruldu (DM'ye geçiyor, saat
+     //      hediyesini itiraf ediyor). Burada birden "seni özledim sıkıntı
+     //      olmayalım" demesi B1'deki yakınlığı bozar.
+     //
+     // ÖNERİM: O satırı SİL. Zoe'nin Seçim B tepkisi 3 mesajla bitsin.
+     // Zaten yukarıda "şüpheci olmak istemiyorum" konuyu kapatıyor.
+     //
+     // Eğer sen "hayır, Zoe YOU'ya hafif itiraz ediyor, bu karakterine
+     // uygun" diyorsan o satır KALSIN AMA revize edilsin:
+     //   → "neyse kafamı kurcalayan bir şey bu akşam istemiyorum"
+     // Bu Zoe'nin duygu durumunu anlatır, YOU'yu suçlamaz.
+
+     // ŞİMDİLİK SİLDİM, sen karar verirsin.
+
+[21:00] Zoe: lena'dan haber aldın mı
+[21:00] Zoe: ben gruba bakmıyorum ama merak ettim
+// DEĞİŞİKLİK: "ben gözlemlemiyorum" → "ben gruba bakmıyorum". "Gözlemlemek" garip bir seçim Zoe için, "gruba bakmıyorum" daha doğal.
+
+================================================================
+SAHNE E — Lena arada mesaj (paralel)
+================================================================
+
+--- 18 dakika ---
+
+[21:18] Lena: tuvaletteyim 2 dk
+[21:18] Lena: çok iyi gidiyor
+[21:19] Lena: alex gerçekten güzel biri
+[21:19] Zoe: DETAY LENA
+[21:19] Zoe: DETAY
+[21:20] Lena: komik
+[21:20] Lena: dinliyor
+[21:20] Lena: gözlerimin içine bakıyor
+// DEĞİŞİKLİK: "gözlerimin içine bakarak" → "gözlerimin içine bakıyor". Yarım cümle tamamlandı.
+[21:21] Lena: ben çok konuşuyorum sanırım ama sorular soruyor
+
+// DEĞİŞİKLİK: "o soruyor da" → "sorular soruyor". Daha net, "da" yarım kalmıştı.
+
+--- 35 saniye ---
+
+[21:21] Lena: dönüyorum
+// DEĞİŞİKLİK: "dur dönüyorum" → "dönüyorum". "Dur" gereksiz.
+[21:22] Lena: sonra yazarım
+
+--- 18 dakika ---
+
+[21:40] Lena: bir şey daha
+[21:41] Lena: ortak bir arkadaşımız varmış
+// DEĞİŞİKLİK: "ortak bir arkadaşımız varmış konuşunca çıktı" → "ortak bir arkadaşımız varmış". İki mesaja böl, "konuşunca çıktı" bir sonraki satırda.
+[21:41] Lena: konuşunca çıktı
+// YENİ: Bu satır v1'de aynı mesaj içindeydi, ayrı mesaj yaptım.
+[21:41] Lena: hem de iş ortağı şu an
+[21:42] Lena: bir firmadan bahsetti
+[21:42] Lena: ismi aklımda kalmadı
+[21:42] Lena: ama tanıdık geldi
+
+[SEÇİM @ 21:43]
+  A: ne firması lena, sor tekrar
+     → [21:43] Lena: soracağım
+     // DEĞİŞİKLİK: "sorucam" → "soracağım". Lena Zoe gibi konuşmaz, düzgün kip.
+     → [21:44] Lena: finans sektöründeymiş
+     → [21:44] Lena: "iyi bir yerde çalışıyor" dedi
+     → [21:44] Lena: ismini sormadım, konuyu dağıtmak istemedim
+     // DEĞİŞİKLİK: "kim olduğunu sormadım çünkü sonra sıkıcı olur" → "ismini sormadım, konuyu dağıtmak istemedim". Daha yetişkin, Lena'ya uygun.
+     → [21:45] Zoe: finans mı
+     → [21:45] Zoe: ethan da finansta
+     → [21:45] Lena: istanbul'da finanstaki herkes birbirini tanır zaten
+     // DEĞİŞİKLİK: "tanıyor" → "tanır" (geniş zaman, genel gerçek, daha doğru).
+
+  B: tadını çıkar, detay sonra
+     // ⚠ SÜREKLİLİK PROBLEMİ: B yolunda Lena finans ipucunu vermiyor.
+     // Bu demek ki Bölüm 3'te Sara adı çıkarken "Alex'in ortak arkadaşı" zemini yok.
+     // Çözüm önerisi:
+     //   B yolunda Lena firma bilgisini VERMESE DE, "ortak arkadaş" + "finans"
+     //   gerçeği B sonuna kadar en azından çıksın. Sadece Zoe'nin takibi
+     //   olmasın. Örnek:
+     → [21:43] Lena: tamam
+     → [21:44] Lena: o da masaya geldi zaten
+     → [21:44] Lena: yazarım sonra
+     → [21:45] Lena: ha bir de ortak bir arkadaşımız var aklımda tutayım
+     // YENİ: Bu satır B yolunun sonuna eklendi ki süreklilik bozulmasın.
+     // Lena "aklımda tutayım" diyor — yani Zoe'ye DAHA SONRA soracak. B3'te çıkabilir.
+
+[21:46] Lena: geldi
+// DEĞİŞİKLİK: "dur geldi" → "geldi". "Dur" gereksiz.
+[21:46] Lena: sonra yazarım
+
+================================================================
+SAHNE G — Lena döndü
+================================================================
+
+--- saatler geçiyor ---
+
+[23:02] Lena: döndüm
+[23:02] Lena: kızlar
+[23:03] Lena: çok iyiydi
+[23:03] Zoe: ANLAT HEMEN
+[23:03] Zoe: merak içindeyim
+// DEĞİŞİKLİK: "ben de merak içindeyim" → "merak içindeyim". "De" gereksiz.
+[23:04] Lena: nereden başlasam
+[23:04] Lena: komik ya
+[23:05] Lena: espri anlayışım onunkiyle uyuyor
+// DEĞİŞİKLİK: "benimkiyle uyuyor" → "onunkiyle uyuyor". Daha doğal — Lena'nın kendi anlayışı sabit, Alex'inki uyumu sağlıyor.
+[23:05] Lena: çok güldüm
+[23:06] Lena: ve dinliyor zoe
+[23:06] Lena: ben anlatıyorum, sorular soruyor
+// DEĞİŞİKLİK: "o soruyor" → "sorular soruyor". Daha tam.
+[23:06] Lena: sonra kendinden anlatıyor
+[23:07] Lena: yürürken bile rahattım
+// DEĞİŞİKLİK: "yürürken bile rahat hissettim" → "yürürken bile rahattım". Daha kısa, "hissettim" gereksiz.
+[23:07] Lena: biliyorsun ilk buluşmalarda kasarım ben
+// DEĞİŞİKLİK: "ben ilk buluşmalarda kasarım" → "ilk buluşmalarda kasarım ben". Kelime sırası Lena'nın bu cümleyi sürpriz olarak söylemesine uygun (özne sona).
+
+[23:08] Lena: heyecanlandım
+[23:08] Lena: ama kendimi kaptırmamaya çalışıyorum
+
+[SEÇİM @ 23:09]
+  A: bırak kendini lena, güzel bir şey yaşıyorsun
+     → [23:09] Lena: biliyorum
+     → [23:10] Lena: ama hep eski yerlerime çekiliyorum
+     // DEĞİŞİKLİK: "o eski yerlerime" → "eski yerlerime". "O" gereksiz.
+     → [23:10] Lena: bir parçam "fazla heyecanlanma" diyor
+     // DEĞİŞİKLİK: "çok heyecanlanma" → "fazla heyecanlanma". Daha somut (çok=yoğunluk, fazla=sınır).
+     → [23:11] Lena: bakalım
+  B: temkinli olman da güzel, tanışma süreci uzun
+     → [23:09] Lena: beni tanıyorsunuz
+     → [23:10] Lena: fazla umutlanmak istemiyorum
+     → [23:10] Lena: önce ben alışayım
+     // DEĞİŞİKLİK: "önce ben alışayım sonra" → "önce ben alışayım". "Sonra" gereksiz, cümle tamam.
+     → [23:11] Zoe: akıllıca
+     // DEĞİŞİKLİK: "akıllı yaklaşım" → "akıllıca". Daha kısa, Zoe tonuna uygun.
+
+[23:12] Lena: bir şey daha var
+// DEĞİŞİKLİK: "bir şey daha var ama" → "bir şey daha var". "Ama" bir sonraki mesaja doğal olarak eklenecek — kaldırıldı.
+[23:12] Lena: söylemem gerek
+[23:13] Lena: alex'in bir hikayesi var
+[23:13] Lena: eski bir ilişki
+[23:13] Lena: tam anlatmadı
+[23:14] Lena: ama sohbet o tarafa gitti bir an
+// DEĞİŞİKLİK: "sohbet bir an o tarafa gitti" → "sohbet o tarafa gitti bir an". Kelime sırası — "bir an" sonunda olunca hafif bir geçicilik hissi veriyor.
+[23:14] Lena: sonra geri çekti
+[23:14] Lena: "uzun bir konu, sonra" dedi
+[23:15] Zoe: zamanla anlatır
+[23:15] Lena: umarım
+[23:15] Lena: ben de kendiminkileri anlatacağım nasıl olsa
+// DEĞİŞİKLİK: "anlatacağım zaten" → "anlatacağım nasıl olsa". "Nasıl olsa" Lena'nın "karşılıklılık" beklentisini daha açık gösteriyor.
+
+================================================================
+SAHNE H — Gece kapanışı
+================================================================
+
+[23:30] Zoe: güzel bir akşamdı kızlar
+// DEĞİŞİKLİK: "çok güzel bir akşamdı kızlar" → "güzel bir akşamdı kızlar". "Çok" gereksiz (style guide).
+[23:30] Zoe: hepimiz için
+[23:31] Lena: siz de iyi ki varsınız
+[23:31] Lena: yalnız olsam bunları tadamazdım
+// DEĞİŞİKLİK: "bunları bu kadar tadamazdım" → "bunları tadamazdım". "Bu kadar" gereksiz.
+[23:32] Zoe: biz de 🧡
+[23:32] Lena: iyi geceler
+[23:33] Zoe: iyi geceler lena
+[23:33] Zoe: iyi geceler sana da
+
+--- ekran kararır ---
+
+// ⚠ CLIFFHANGER NOTU:
+// Bu bölüm sakin kapanıyor, bilinçli olarak "fırtına öncesi sessizlik" olarak.
+// Bölüm 3'te Sara adı çıkacak. B2'nin kendi cliffhanger'ı olmak zorunda değil.
+// ANCAK: Engine açısından her bölümün son ekranında "episode 3 coming soon"
+// CTA'sı için emosyonel ivme kalması iyi olur.
+//
+// İKİ SEÇENEK:
+//   1. BOŞ BIRAK — şu anki hali, "peace before storm" kararlı
+//   2. KÜÇÜK İPUCU EKLE — örneğin Zoe ekran kararırken "bir gece önce Ethan
+//      telefonuna bakıp güldüğünü" hatırlıyor, ama geçiyor. Oyuncunun aklında
+//      kalıyor, Zoe'nin değil.
+//
+// Bu KARARI sen ver — benim önerim: 1 (boş bırak). B3'te Sara adının çıkışı
+// yeterince güçlü bir açılış olacak.
+
+================================================================
+BÖLÜM SONU
+================================================================
+
+================================================================
+PASS ÖZET RAPORU
+================================================================
+
+Ne uyguladım:
+
+1. GEREKSİZ KELIME TEMİZLİĞİ (style guide madde X):
+   - "bile", "sanki", "bu kadar", "çok", "ben" (gereksiz özne), "galiba",
+     "dur", "de/da" — hepsi teker teker kontrol edildi, çıkarıldı veya
+     ispatlandı.
+   - Örnek: "menüyü incelemeye başladım bile" → "menüyü incelemeye başladım"
+
+2. KELIME SIRASI DÜZELTMESİ:
+   - Türkçe doğal kelime sırasına göre birkaç satır yeniden dizildi.
+   - Örnek: "yemek yedik ethan'la" → "ethan'la yemek yedik"
+
+3. LENA'NIN DOZU:
+   - Lena bazı yerlerde fazla resmi kalmıştı, gevşetildi.
+   - Örnek: "yardım etmen gerek" → "bana yardım et"
+
+4. ZOE'NIN TONU:
+   - Zoe'nin "ya" hayret, "hâlâ" takip, "ha" şaşkınlık gibi parçacıkları eklendi.
+   - "Bir düşünce = bir mesaj" kuralına uymayan yerler bölündü.
+
+5. SÜREKLILIK EKLEMESİ:
+   - Sahne E Seçim B yoluna son satır eklendi ("ortak arkadaşımız var aklımda
+     tutayım") — Bölüm 3 açılışının tutarlı kalması için.
+
+6. TARTIŞMALI SİLME:
+   - Sahne D Seçim B'nin son satırı ("seni özledim biraz sıkıntılı olmayalım
+     bu akşam") SİLİNDİ. Sen kararını vereceksin.
+
+Ne uygulamadım:
+
+- Caption stratejisi — mevcut caption'lar zaten güzeldi, dokunmadım
+- Ethan'ın karakter kuralları — v1 zaten doğruydu (sadece Zoe anlatımı içinde)
+- Emoji kontrolleri — 🥹 🧡 Zoe listesinde OK, başka emoji yok
+- Zoe İngilizce yasağı — v1'de zaten İngilizce yok, tertemiz
+
+Açık kararlar (senden bekliyorum):
+
+[A] Sahne D Seçim B son satırı: SİL (önerim) / KALSIN AMA REVİZE / orijinal kalsın?
+[B] Sahne H cliffhanger: BOŞ KALSIN (önerim) / KÜÇÜK İPUCU EKLE?
+[C] Herhangi bir değişiklik itirazın var mı? Hangisi?
