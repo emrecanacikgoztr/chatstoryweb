@@ -13,7 +13,15 @@ const ChatStory = (() => {
   let _config={}, _total=0, _devMode=false, _rendered=[];
   let _currentChannel='group';
   let _state={};  // Player choices state (e.g., {dress:'navy', shoe:'flat', earring:'pearl'})
+  let _speed=1;   // Story pacing multiplier (dev mode tunable, persisted in localStorage)
+  let _choiceActive=false;  // True while choice panel is up OR reply chain is running. Blocks tap-pause from skipping the choice.
+  const SPEED_LEVELS=[1, 1.25, 1.5, 1.75, 2];
+  const SPEED_LS_KEY='chatstory_dev_speed';
   const CIRC = 2 * Math.PI * 11;
+
+  // Divides a story-pacing delay by the current speed multiplier.
+  // Used by schedule(), showTyping(), runChain pre/post-typing pauses, and CTA reveal.
+  function applySpeed(ms){ return _speed>0 ? Math.max(0, ms/_speed) : ms; }
   let feed, ringEl, pctEl, ctaEl, pausePill, tintEl;
   let chNameEl, chAvatarEl, chHeaderEl;
 
@@ -114,13 +122,13 @@ const ChatStory = (() => {
     requestAnimationFrame(()=>requestAnimationFrame(()=>{d.classList.add('show');d.scrollIntoView({behavior:'smooth',block:'nearest'});}));
     // Use _timer so it can be cancelled on pause
     if(_timer){clearTimeout(_timer);_timer=null;}
-    _timer=setTimeout(()=>{_timer=null;removeTyping();cb();},duration);
+    _timer=setTimeout(()=>{_timer=null;removeTyping();cb();},applySpeed(duration));
   }
 
   // ── SCHEDULE ──
   function schedule(delay) {
     if(_paused) return;
-    _timer=setTimeout(()=>{_timer=null;next();},delay);
+    _timer=setTimeout(()=>{_timer=null;next();},applySpeed(delay));
   }
 
   // ─────────────────────────────────────
@@ -169,6 +177,33 @@ const ChatStory = (() => {
     const t=document.getElementById('dev-toast'); if(!t) return;
     t.textContent=msg; t.style.opacity='1';
     setTimeout(()=>t.style.opacity='0',2000);
+  }
+
+  // ── SPEED CONTROL (dev-mode) ──
+  function formatSpeedLabel(s){
+    // 1 → "1x", 1.25 → "1.25x", 1.5 → "1.5x"
+    return (Number.isInteger(s) ? s.toFixed(0) : s.toString()) + 'x';
+  }
+  function setSpeed(s){
+    _speed = s;
+    try { localStorage.setItem(SPEED_LS_KEY, String(s)); } catch(e){}
+    const btn = document.getElementById('dev-speed');
+    if(btn) btn.textContent = formatSpeedLabel(s);
+  }
+  function cycleSpeed(){
+    const i = SPEED_LEVELS.indexOf(_speed);
+    const next = SPEED_LEVELS[(i+1) % SPEED_LEVELS.length];
+    setSpeed(next);
+    showDevToast(`Hız: ${formatSpeedLabel(next)}`);
+  }
+  function loadSavedSpeed(){
+    try {
+      const raw = localStorage.getItem(SPEED_LS_KEY);
+      if(raw){
+        const s = parseFloat(raw);
+        if(SPEED_LEVELS.includes(s)) _speed = s;
+      }
+    } catch(e){}
   }
 
   // ── EPISODE REGISTRY ──
@@ -508,6 +543,9 @@ const ChatStory = (() => {
     const panel = document.getElementById('choice-panel');
     const opts  = document.getElementById('choice-options');
     opts.innerHTML = '';
+    // Lock tap-pause until the player picks an option AND the reply chain finishes.
+    // Without this, tap-tap on screen calls schedule(80) → next() and skips the choice entirely.
+    _choiceActive = true;
 
     m.options.forEach((opt, i) => {
       const btn = document.createElement('button');
@@ -546,7 +584,11 @@ const ChatStory = (() => {
             }
             if(ci >= chain.length) {
               if(_timer){clearTimeout(_timer);_timer=null;}
-              _timer = setTimeout(()=>{_timer=null; schedule(1200);}, 600);
+              _timer = setTimeout(()=>{
+                _timer=null;
+                _choiceActive=false;  // Reply chain done — release tap-pause lock.
+                schedule(1200);
+              }, applySpeed(600));
               return;
             }
             const r = chain[ci];
@@ -568,7 +610,7 @@ const ChatStory = (() => {
                 if(_devMode) refreshDevHandlers();
                 runChain(ci+1);
               });
-            }, ci===0 ? 800 : 1800);
+            }, applySpeed(ci===0 ? 800 : 1800));
           }
           runChain(0);
         }, 300);
@@ -629,7 +671,7 @@ const ChatStory = (() => {
     else if(m.txt&&m.txt.length>40) d=1600;
     else if(m.txt&&m.txt.length<8) d=2200;
     if(_idx<_total) schedule(d);
-    else setTimeout(()=>ctaEl.classList.add('show'),2000);
+    else setTimeout(()=>ctaEl.classList.add('show'),applySpeed(2000));
     if(_devMode) refreshDevHandlers();
   }
 
@@ -644,7 +686,7 @@ const ChatStory = (() => {
       const shouldSkip = m.skipIf.some(c => _state[c.key] === c.value);
       if(shouldSkip){
         if(_idx<_total) schedule(50);
-        else setTimeout(()=>ctaEl.classList.add('show'),2000);
+        else setTimeout(()=>ctaEl.classList.add('show'),applySpeed(2000));
         return;
       }
     }
@@ -654,7 +696,7 @@ const ChatStory = (() => {
       const shouldShow = m.showIf.every(c => _state[c.key] === c.value);
       if(!shouldShow){
         if(_idx<_total) schedule(50);
-        else setTimeout(()=>ctaEl.classList.add('show'),2000);
+        else setTimeout(()=>ctaEl.classList.add('show'),applySpeed(2000));
         return;
       }
     }
@@ -717,6 +759,9 @@ const ChatStory = (() => {
     document.addEventListener('click',()=>{
       if(_devMode) return;
       if(_idx===0) return;
+      // Block tap-pause while a choice is on screen or its reply chain is still running.
+      // Otherwise tap-tap (pause/resume) calls schedule(80) → next() and skips past the choice.
+      if(_choiceActive) return;
       _paused=!_paused;
       if(pausePill) pausePill.style.opacity=_paused?'1':'0';
       if(!_paused){
@@ -731,18 +776,23 @@ const ChatStory = (() => {
     });
 
     if(ringEl){ringEl.style.strokeDasharray=String(CIRC);ringEl.style.strokeDashoffset=String(CIRC);}
+    // Load persisted speed BEFORE injecting dev UI so the speed button renders the correct label.
+    // (Previously this was called in start() — after injectDevUI — which left the button stuck at "1x"
+    //  while _speed silently used the saved value, making the story feel mysteriously faster.)
+    loadSavedSpeed();
     injectDevUI();
   }
 
   // ── INJECT DEV UI ──
   function injectDevUI() {
     const bar=document.createElement('div'); bar.id='dev-bar';
-    bar.innerHTML=`<button class="dev-btn" id="dev-prev">◀</button><button class="dev-btn dev-info" id="dev-info" title="Bölüm bilgisi & geçiş">EP · ···</button><button class="dev-btn" id="dev-next">▶</button><button class="dev-btn dev-exit" id="dev-exit">✕</button>`;
+    bar.innerHTML=`<button class="dev-btn" id="dev-prev">◀</button><button class="dev-btn dev-info" id="dev-info" title="Bölüm bilgisi & geçiş">EP · ···</button><button class="dev-btn" id="dev-next">▶</button><button class="dev-btn dev-speed" id="dev-speed" title="Hızı değiştir (tıkla)">${formatSpeedLabel(_speed)}</button><button class="dev-btn dev-exit" id="dev-exit">✕</button>`;
     document.body.appendChild(bar);
     document.getElementById('dev-prev').onclick=(e)=>{e.stopPropagation();devPrev();};
     document.getElementById('dev-next').onclick=(e)=>{e.stopPropagation();devNext();};
     document.getElementById('dev-exit').onclick=(e)=>{e.stopPropagation();exitDevMode();};
     document.getElementById('dev-info').onclick=(e)=>{e.stopPropagation();toggleEpisodePanel();};
+    document.getElementById('dev-speed').onclick=(e)=>{e.stopPropagation();cycleSpeed();};
 
     // Episode info panel (bölüm listesi)
     const epPanel=document.createElement('div'); epPanel.id='dev-ep-panel';
@@ -769,6 +819,7 @@ const ChatStory = (() => {
 .dev-btn{background:rgba(255,200,50,.1);border:1px solid rgba(255,200,50,.25);color:rgba(255,200,50,.9);font-size:12px;padding:7px 14px;border-radius:8px;cursor:pointer;font-family:var(--mono);}
 .dev-btn:hover{background:rgba(255,200,50,.2);}
 .dev-btn.dev-exit{color:rgba(255,100,100,.8);border-color:rgba(255,100,100,.25);background:rgba(255,100,100,.08);}.dev-btn.dev-dl{color:rgba(100,220,130,.9);border-color:rgba(100,220,130,.3);background:rgba(100,220,130,.1);}
+.dev-btn.dev-speed{color:rgba(120,200,255,.9);border-color:rgba(120,200,255,.3);background:rgba(120,200,255,.1);min-width:46px;font-size:11px;letter-spacing:0;}
 #dev-editor{display:none;position:fixed;bottom:76px;left:50%;transform:translateX(-50%);width:calc(100% - 32px);max-width:398px;background:rgba(16,16,22,.98);border:1px solid rgba(255,200,50,.35);border-radius:14px;padding:14px;z-index:900;flex-direction:column;gap:10px;backdrop-filter:blur(16px);box-shadow:0 8px 32px rgba(0,0,0,.7);}
 .dev-editor-header{display:flex;align-items:center;justify-content:space-between;}
 .dev-editor-who{font-family:var(--mono);font-size:10px;color:rgba(255,200,50,.8);letter-spacing:.1em;text-transform:uppercase;}
@@ -799,7 +850,7 @@ const ChatStory = (() => {
   }
 
   // ── START ──
-  function start() { _idx=0; _paused=false; _rendered=[]; _state={}; loadSavedEdits(); next(); }
+  function start() { _idx=0; _paused=false; _rendered=[]; _state={}; _choiceActive=false; loadSavedEdits(); next(); }
 
   return { init, start };
 
