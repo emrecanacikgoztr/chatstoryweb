@@ -104,24 +104,6 @@ body { background: var(--bg); }
 .badge-done  { background: rgba(74,222,128,.1);  color: #4ade80; border: 1px solid rgba(74,222,128,.2); }
 .badge-lock  { background: rgba(255,255,255,.05); color: var(--ghost); border: 1px solid rgba(255,255,255,.08); }
 
-/* bottom nav stub */
-.bottom-nav {
-  position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
-  width: 100%; max-width: 430px;
-  background: rgba(15,15,19,.96); backdrop-filter: blur(16px);
-  border-top: 1px solid rgba(255,255,255,.06);
-  padding: 10px 0 20px;
-  display: flex; justify-content: space-around;
-  z-index: 100;
-}
-.nav-item {
-  display: flex; flex-direction: column; align-items: center; gap: 3px;
-  font-family: var(--mono); font-size: 9px; color: var(--ghost);
-  letter-spacing: .06em; text-transform: uppercase;
-  cursor: pointer; transition: color .2s;
-}
-.nav-item.active { color: #d4845a; }
-.nav-ico { font-size: 18px; }
 </style>
 </head>
 <body>
@@ -274,22 +256,6 @@ body { background: var(--bg); }
       <div class="ep-badge badge-lock">🔒</div>
     </div>
 
-  </div>
-</div>
-
-<!-- BOTTOM NAV -->
-<div class="bottom-nav">
-  <div class="nav-item active">
-    <span class="nav-ico">📖</span>
-    <span>Story</span>
-  </div>
-  <div class="nav-item">
-    <span class="nav-ico">👥</span>
-    <span>Cast</span>
-  </div>
-  <div class="nav-item">
-    <span class="nav-ico">⚙️</span>
-    <span>Settings</span>
   </div>
 </div>
 
