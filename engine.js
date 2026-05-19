@@ -15,6 +15,8 @@ const ChatStory = (() => {
   let _state={};  // Player choices state (e.g., {dress:'navy', shoe:'flat', earring:'pearl'})
   let _speed=1;   // Story pacing multiplier (dev mode tunable, persisted in localStorage)
   let _choiceActive=false;  // True while choice panel is up OR reply chain is running. Blocks tap-pause from skipping the choice.
+  let _chipsSticky=false;   // If true, message #N chips stay visible even after exiting dev mode. localStorage'da kalıcı.
+  const CHIPS_LS_KEY='chatstory_dev_chips_sticky';
   const SPEED_LEVELS=[1, 1.25, 1.5, 1.75, 2];
   const SPEED_LS_KEY='chatstory_dev_speed';
   const CIRC = 2 * Math.PI * 11;
@@ -141,6 +143,7 @@ const ChatStory = (() => {
     removeTyping();
     document.getElementById('dev-bar').style.display='flex';
     if(pausePill) pausePill.style.opacity='0';
+    applyChipsVisibility();
     // Transform progress pct into download button
     if(pctEl){
       pctEl.textContent='⬇ Senaryo';
@@ -163,6 +166,7 @@ const ChatStory = (() => {
     const panel=document.getElementById('dev-ep-panel'); if(panel) panel.classList.remove('open');
     closeEditor();
     feed.querySelectorAll('.bubble[data-msg-idx]').forEach(b=>{b.style.cursor='';b.onclick=null;});
+    applyChipsVisibility();  // sticky açıksa chip'ler kalsın, değilse gizlensin
     // Restore progress pct
     if(pctEl){
       const pct=Math.round((_idx/_total)*100);
@@ -204,6 +208,35 @@ const ChatStory = (() => {
         if(SPEED_LEVELS.includes(s)) _speed = s;
       }
     } catch(e){}
+  }
+
+  // Episode label (chip içeriği için): "1e2", "1e6" gibi.
+  // Sezon 1 hardcoded (sezon 2 gelince burayı update et).
+  function getEpLabel(){
+    const ep = parseInt(_config.episode || '0', 10);
+    return '1e' + ep;
+  }
+
+  // ── CHIPS STICKY (mesaj #N chip'lerini dev mode dışında da göster) ──
+  function applyChipsVisibility(){
+    // body.show-chips class'ı varsa chip'ler CSS ile görünür.
+    // Dev mode aktifse her zaman göster; değilse _chipsSticky'ye bak.
+    if(_devMode || _chipsSticky) document.body.classList.add('show-chips');
+    else document.body.classList.remove('show-chips');
+  }
+  function setChipsSticky(on){
+    _chipsSticky = on;
+    try { localStorage.setItem(CHIPS_LS_KEY, on ? '1' : '0'); } catch(e){}
+    const btn = document.getElementById('dev-chips');
+    if(btn) btn.classList.toggle('on', on);
+    applyChipsVisibility();
+  }
+  function toggleChipsSticky(){
+    setChipsSticky(!_chipsSticky);
+    showDevToast(`Mesaj numaraları: ${_chipsSticky ? 'her zaman görünür ✓' : 'sadece dev mode'}`);
+  }
+  function loadSavedChipsSticky(){
+    try { _chipsSticky = localStorage.getItem(CHIPS_LS_KEY) === '1'; } catch(e){}
   }
 
   // ── EPISODE REGISTRY ──
@@ -528,6 +561,12 @@ const ChatStory = (() => {
     if(isRight) b.style.borderRight=`2.5px solid ${cfg.color||'rgba(255,255,255,.2)'}`;
     else b.style.borderLeft=`2.5px solid ${cfg.color||'rgba(255,255,255,.2)'}`;
     b.textContent=m.txt;
+    // Mesaj chip'i — mesajın sonunda, "1e2.45" formatında (episode + msgIdx).
+    // Synthetic mesajlarda (choice'tan üretilen YOU + reply zinciri) _msgs.indexOf -1
+    // dönerdi; bu mesajlar showChoicePanel'de _chipLabel ile geliyor, onu kullan.
+    const idxTag=document.createElement('span'); idxTag.className='dev-msg-idx';
+    idxTag.textContent = m._chipLabel || (getEpLabel()+'.'+msgIdx);
+    b.appendChild(idxTag);
     b.appendChild(metaEl(m.at));
     bw.appendChild(b); row.appendChild(bw); return row;
   }
@@ -547,10 +586,15 @@ const ChatStory = (() => {
     // Without this, tap-tap on screen calls schedule(80) → next() and skips the choice entirely.
     _choiceActive = true;
 
+    const choiceIdx = _msgs.indexOf(m);
     m.options.forEach((opt, i) => {
       const btn = document.createElement('button');
       btn.className = 'choice-panel-btn';
-      btn.innerHTML = `<span class="choice-panel-key">${opt.label}</span><span class="choice-panel-txt">${opt.txt}</span>`;
+      // Choice chip formatı: "1e2.45A", "1e2.45B" — parent choice msgIdx + option label.
+      // Bu chip aynı zamanda kullanıcı seçim yapınca üretilen YOU bubble'a _chipLabel olarak
+      // iletilecek ki feed'de görüldüğünde aynı chip kalsın.
+      const optChipBase = `${getEpLabel()}.${choiceIdx}${opt.label}`;
+      btn.innerHTML = `<span class="choice-panel-key">${opt.label}</span><span class="choice-panel-txt">${opt.txt}</span><span class="dev-msg-idx dev-msg-idx-choice">${optChipBase}</span>`;
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
         if(_devMode) return;
@@ -564,9 +608,9 @@ const ChatStory = (() => {
         panel.classList.remove('show');
         setTimeout(() => { opts.innerHTML = ''; }, 350);
 
-        // Show YOU message in feed
+        // Show YOU message in feed — choice option chip'iyle aynı _chipLabel'ı taşısın
         setTimeout(() => {
-          const youEl = buildEl({t:'msg', f:'you', at:m.at||'', gap:true, txt:opt.txt});
+          const youEl = buildEl({t:'msg', f:'you', at:m.at||'', gap:true, txt:opt.txt, _chipLabel: optChipBase});
           feed.appendChild(youEl); _rendered.push(youEl);
           requestAnimationFrame(()=>requestAnimationFrame(()=>{
             youEl.classList.add('show');
@@ -598,7 +642,8 @@ const ChatStory = (() => {
               const td = r.t==='photo' ? 1400 : (r.txt && r.txt.length > 60 ? 1400 : 950);
               showTyping(r.f, td, () => {
                 // Build reply with original type (msg, photo, etc.)
-                const replyData = Object.assign({}, r, {at: r.at||m.at, gap: ci===0});
+                // _chipLabel: "1e2.45A.1", "1e2.45A.2"... — option chip + reply sıra numarası
+                const replyData = Object.assign({}, r, {at: r.at||m.at, gap: ci===0, _chipLabel: `${optChipBase}.${ci+1}`});
                 if(!replyData.t) replyData.t = 'msg';
                 const rEl = buildEl(replyData);
                 feed.appendChild(rEl); _rendered.push(rEl);
@@ -780,19 +825,22 @@ const ChatStory = (() => {
     // (Previously this was called in start() — after injectDevUI — which left the button stuck at "1x"
     //  while _speed silently used the saved value, making the story feel mysteriously faster.)
     loadSavedSpeed();
+    loadSavedChipsSticky();
+    applyChipsVisibility();  // Sticky açıksa player mode'da bile chip'ler görünür
     injectDevUI();
   }
 
   // ── INJECT DEV UI ──
   function injectDevUI() {
     const bar=document.createElement('div'); bar.id='dev-bar';
-    bar.innerHTML=`<button class="dev-btn" id="dev-prev">◀</button><button class="dev-btn dev-info" id="dev-info" title="Bölüm bilgisi & geçiş">EP · ···</button><button class="dev-btn" id="dev-next">▶</button><button class="dev-btn dev-speed" id="dev-speed" title="Hızı değiştir (tıkla)">${formatSpeedLabel(_speed)}</button><button class="dev-btn dev-exit" id="dev-exit">✕</button>`;
+    bar.innerHTML=`<button class="dev-btn" id="dev-prev">◀</button><button class="dev-btn dev-info" id="dev-info" title="Bölüm bilgisi & geçiş">EP · ···</button><button class="dev-btn" id="dev-next">▶</button><button class="dev-btn dev-speed" id="dev-speed" title="Hızı değiştir (tıkla)">${formatSpeedLabel(_speed)}</button><button class="dev-btn dev-chips${_chipsSticky?' on':''}" id="dev-chips" title="Mesaj numaralarını dev mode dışında da göster">#</button><button class="dev-btn dev-exit" id="dev-exit">✕</button>`;
     document.body.appendChild(bar);
     document.getElementById('dev-prev').onclick=(e)=>{e.stopPropagation();devPrev();};
     document.getElementById('dev-next').onclick=(e)=>{e.stopPropagation();devNext();};
     document.getElementById('dev-exit').onclick=(e)=>{e.stopPropagation();exitDevMode();};
     document.getElementById('dev-info').onclick=(e)=>{e.stopPropagation();toggleEpisodePanel();};
     document.getElementById('dev-speed').onclick=(e)=>{e.stopPropagation();cycleSpeed();};
+    document.getElementById('dev-chips').onclick=(e)=>{e.stopPropagation();toggleChipsSticky();};
 
     // Episode info panel (bölüm listesi)
     const epPanel=document.createElement('div'); epPanel.id='dev-ep-panel';
@@ -831,6 +879,11 @@ const ChatStory = (() => {
 .dev-editor-btn.cancel{background:rgba(255,255,255,.08);color:var(--smoke);}
 .dev-editor-btn.save{background:rgba(255,200,50,.18);color:rgba(255,200,50,.95);border:1px solid rgba(255,200,50,.3);}
 .bubble.editing{outline:2px solid rgba(255,200,50,.7)!important;outline-offset:2px;}
+.dev-msg-idx{display:none;font-family:var(--mono);font-size:9px;color:rgba(255,200,50,.55);letter-spacing:.04em;margin-left:6px;padding:1px 4px;border-radius:4px;background:rgba(255,200,50,.08);border:1px solid rgba(255,200,50,.18);vertical-align:1px;pointer-events:none;white-space:nowrap;}
+body.show-chips .dev-msg-idx{display:inline-block;}
+.dev-msg-idx-choice{margin-left:auto;align-self:center;}
+.dev-btn.dev-chips{color:rgba(255,200,50,.6);border-color:rgba(255,200,50,.2);background:rgba(255,200,50,.05);min-width:30px;padding:7px 8px;font-family:var(--mono);font-size:13px;}
+.dev-btn.dev-chips.on{color:rgba(255,200,50,1);border-color:rgba(255,200,50,.5);background:rgba(255,200,50,.18);}
 #dev-toast{position:fixed;top:84px;left:50%;transform:translateX(-50%);background:rgba(255,200,50,.12);border:1px solid rgba(255,200,50,.3);color:rgba(255,200,50,.9);font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:5px 16px;border-radius:20px;opacity:0;transition:opacity .4s;z-index:1000;pointer-events:none;white-space:nowrap;}
 .dev-btn.dev-info{flex:1;margin:0 6px;font-size:10px;letter-spacing:.05em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:200px;}
 #dev-ep-panel{display:none;position:fixed;bottom:64px;left:50%;transform:translateX(-50%);width:calc(100% - 24px);max-width:406px;background:rgba(16,16,22,.98);border:1px solid rgba(255,200,50,.3);border-radius:14px;padding:12px;z-index:850;backdrop-filter:blur(16px);box-shadow:0 8px 32px rgba(0,0,0,.7);max-height:60vh;overflow-y:auto;}
