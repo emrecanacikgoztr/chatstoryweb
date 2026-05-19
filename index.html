@@ -10,6 +10,14 @@
 <title>ChatStory</title>
 <link rel="stylesheet" href="style.css?v=11">
 <style>
+/* Landing page'in kendi scroll'u olmalı; global style.css body'yi 100dvh + overflow:hidden
+   ile kilitliyor (chat ekranları için). Burada override ediyoruz. */
+html, body {
+  height: auto !important;
+  min-height: 100dvh;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
 body { background: var(--bg); }
 
 .home-hero {
