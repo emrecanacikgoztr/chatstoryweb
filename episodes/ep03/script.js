@@ -41,7 +41,7 @@ const MESSAGES = [
   {"t": "msg", "f": "lena", "at": "23:41", "txt": "Ama gerçekten farklıydı"},
   {"t": "msg", "f": "lena", "at": "23:41", "txt": "Çok rahattım yanında"},
 
-  {"t": "msg", "f": "zoe", "at": "23:42", "txt": "Bu çok önemli aslında", "gap": true},
+  {"t": "msg", "f": "zoe", "at": "23:42", "txt": "Bu çok güzel bir şey", "gap": true},
   {"t": "msg", "f": "zoe", "at": "23:42", "txt": "İlk gecede rahat hissediyorsan"},
   {"t": "msg", "f": "zoe", "at": "23:42", "txt": "Devamı gelir bence"},
 
@@ -89,14 +89,14 @@ const MESSAGES = [
 
   // ─── SEÇİM 1 ───
   {"t": "choice", "at": "23:51", "options": [
-    {"label": "A", "txt": "Üzme kendini, en yakın arkadaşıdır", "set": {"you_lena_advice": "soothe"}, "replies": [
+    {"label": "A", "txt": "Üzme kendini, söylediği gibidir", "set": {"you_lena_advice": "soothe"}, "replies": [
       {"f": "lena", "at": "23:52", "txt": "Haklısın"},
       {"f": "lena", "at": "23:52", "txt": "En yakın arkadaşım dedi diyorum kendime"},
       {"f": "lena", "at": "23:53", "txt": "Belki ben kafamda büyütüyorum"},
       {"f": "zoe", "at": "23:53", "txt": "Aynen, abartma kafanda"}
     ]},
-    {"label": "B", "txt": "Tedirginsen bir dahaki buluşmanızda sor kesin", "set": {"you_lena_advice": "confront"}, "replies": [
-      {"f": "lena", "at": "23:52", "txt": "Sorabilir miyim ki ilk gecede"},
+    {"label": "B", "txt": "Bir dahaki buluşmanızda sor kesin", "set": {"you_lena_advice": "confront"}, "replies": [
+      {"f": "lena", "at": "23:52", "txt": "Bu kadar erken sormak"},
       {"f": "lena", "at": "23:53", "txt": "Garip olmaz mı"},
       {"f": "zoe", "at": "23:53", "txt": "Bence değil, açık olmak iyidir"},
       {"f": "lena", "at": "23:54", "txt": "Hmm"},
@@ -254,7 +254,6 @@ const MESSAGES = [
   {"t": "msg", "f": "lena", "at": "00:25", "txt": "\"Weekend reset\" demiş"},
 
   {"t": "msg", "f": "zoe", "at": "00:25", "txt": "Hımm", "gap": true},
-  {"t": "msg", "f": "zoe", "at": "00:26", "txt": "Niye konum kapatmış ki"},
 
   // ═══════════════════════════════════════════════════════
   // SAHNE C3b — Outfit flatlay
@@ -315,17 +314,15 @@ const MESSAGES = [
 
   {"t": "msg", "f": "lena", "at": "00:33", "txt": "Sahi mi", "gap": true},
 
-  {"t": "msg", "f": "zoe", "at": "00:34", "txt": "Ethan'ta var", "gap": true},
-  {"t": "msg", "f": "zoe", "at": "00:34", "txt": "Aynı renk"},
+  {"t": "msg", "f": "zoe", "at": "00:34", "txt": "Ethan'da var aynısı", "gap": true},
+  {"t": "msg", "f": "zoe", "at": "00:34", "txt": "Bazen ben giyiyorum hatta"},
 
-  {"t": "msg", "f": "lena", "at": "00:34", "txt": "Bende de olsun keşke 😅", "gap": true},
 
-  {"t": "msg", "f": "zoe", "at": "00:35", "txt": "Popüler model herhalde", "gap": true},
+  {"t": "msg", "f": "zoe", "at": "00:35", "txt": "Popüler bu ara", "gap": true},
   {"t": "msg", "f": "zoe", "at": "00:35", "txt": "Herkeste var"},
 
   {"t": "msg", "f": "lena", "at": "00:35", "txt": "Aynen", "gap": true},
 
-  {"t": "msg", "f": "lena", "at": "00:36", "txt": "Tesadüf"},
 
   // ═══════════════════════════════════════════════════════
   // SAHNE C5 — Bölüm sonu

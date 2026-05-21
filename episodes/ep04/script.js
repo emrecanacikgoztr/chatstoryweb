@@ -121,8 +121,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "lena", "at": "20:37", "txt": "Ohooo", "gap": true},
 
-  {"t": "msg", "f": "zoe", "at": "20:37", "txt": "Tam takım buradayız", "gap": true},
-  {"t": "msg", "f": "zoe", "at": "20:38", "txt": "Bütçemizin önemli kısmı onlardan geliyor"},
+  {"t": "msg", "f": "zoe", "at": "20:38", "txt": "Biriyle yeni başladık çalışmaya, çok iyi satış yapıyoruz"},
 
   {"t": "msg", "f": "lena", "at": "20:38", "txt": "Önemli akşam yani", "gap": true},
 
@@ -146,7 +145,7 @@ const MESSAGES = [
       {"f": "lena", "at": "20:43", "txt": "Aynen"},
       {"f": "zoe", "at": "20:44", "txt": "Müşterilerle uzun uzun konuştuk"}
     ]},
-    {"label": "B", "txt": "Ethan'ın yanında ol, eşin gibi davran", "set": {"you_at_event": "partner"}, "replies": [
+    {"label": "B", "txt": "Ethan'ın yanında ol, sevgilin gibi davran", "set": {"you_at_event": "partner"}, "replies": [
       {"f": "zoe", "at": "20:42", "txt": "Evet doğru"},
       {"f": "zoe", "at": "20:43", "txt": "Bu akşam onun da burada olması özel"},
       {"f": "zoe", "at": "20:43", "txt": "Yanına döndüm"},
@@ -155,8 +154,8 @@ const MESSAGES = [
     ]}
   ]},
 
-  {"t": "msg", "f": "zoe", "at": "20:50", "txt": "Ben bir tuvalete gidiyorum", "gap": true},
-  {"t": "msg", "f": "zoe", "at": "20:51", "txt": "Birazdan dönerim"},
+  {"t": "msg", "f": "zoe", "at": "20:50", "txt": "Kızlarrr", "gap": true},
+  {"t": "msg", "f": "zoe", "at": "20:51", "txt": "Tuvalete gitmiştim döndüğümde"},
 
   // ═══════════════════════════════════════════════════════
   // SAHNE B1 — "Patlama"
@@ -185,10 +184,10 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "21:14", "txt": "Bir kadınla gülüyordu"},
   {"t": "msg", "f": "zoe", "at": "21:14", "txt": "Sarıldılar"},
-  {"t": "msg", "f": "zoe", "at": "21:15", "txt": "Yanaktan öpüştüler"},
+  {"t": "msg", "f": "zoe", "at": "21:15", "txt": "Kız Ethan'ı öptü"},
 
-  {"t": "msg", "f": "zoe", "at": "21:15", "txt": "Eli tutmuş Ethan'ın"},
-  {"t": "msg", "f": "zoe", "at": "21:15", "txt": "Sonra kadın da Ethan'a sarıldı uzun uzun"},
+  {"t": "msg", "f": "zoe", "at": "21:15", "txt": "Ethan kızın elini tuttu"},
+  {"t": "msg", "f": "zoe", "at": "21:15", "txt": "Sonra da Ethan'a sarıldı uzun uzun"},
 
   {"t": "msg", "f": "lena", "at": "21:16", "txt": "Ya", "gap": true},
   {"t": "msg", "f": "lena", "at": "21:16", "txt": "Kim olabilir bu"},
@@ -216,6 +215,7 @@ const MESSAGES = [
     ]}
   ]},
 
+  {"t": "msg", "f": "zoe", "at": "21:20", "txt": "Ethan beni gördü galiba ne yapayım?", "gap": true},
   // ─── SEÇİM 4 (sadece you_after_photo === 'confront' ise) ───
   {"t": "choice", "at": "21:20", "showIf": [{"key": "you_after_photo", "value": "confront"}], "options": [
     {"label": "A", "txt": "Soğuk dur, kibar laf sok", "set": {"you_aggression": "sarcasm"}, "replies": [
@@ -254,14 +254,14 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "21:26", "txt": "Bir garson elinde tepsiyle önümden geçiyordu"},
 
-  {"t": "msg", "f": "zoe", "at": "21:27", "txt": "Çarpıştık"},
+  {"t": "msg", "f": "zoe", "at": "21:27", "txt": "Garsona çarptım"},
 
-  {"t": "msg", "f": "zoe", "at": "21:27", "txt": "İçkiler yere döküldü"},
+  {"t": "msg", "f": "zoe", "at": "21:27", "txt": "Tüm içkiler üzerime döküldü"},
 
-  {"t": "msg", "f": "zoe", "at": "21:28", "txt": "Kalabalık döndü baktı"},
-  {"t": "msg", "f": "zoe", "at": "21:28", "txt": "Pardon dedim ben"},
+  {"t": "msg", "f": "zoe", "at": "21:28", "txt": "Herkes bana baktı"},
+  {"t": "msg", "f": "zoe", "at": "21:28", "txt": "Rezil oldum ya off"},
 
-  {"t": "msg", "f": "zoe", "at": "21:29", "txt": "Herkes Zoe Zoe diye bakıyordu"},
+  {"t": "msg", "f": "zoe", "at": "21:29", "txt": "Çok kötü hissediyorum"},
   {"t": "msg", "f": "zoe", "at": "21:29", "txt": "İş arkadaşlarım hepsi gördü"},
 
   {"t": "msg", "f": "zoe", "at": "21:30", "txt": "Çıktım kaçar gibi"},
@@ -285,7 +285,7 @@ const MESSAGES = [
   {"t": "msg", "f": "lena", "at": "21:34", "txt": "Ethan seni aramaya çıktı mı"},
 
   {"t": "msg", "f": "zoe", "at": "21:35", "txt": "Bilmiyorum", "gap": true},
-  {"t": "msg", "f": "zoe", "at": "21:35", "txt": "Telefonum sessizde"},
+  {"t": "msg", "f": "zoe", "at": "21:35", "txt": "Arıyor sürekli ama açmıyorum."},
 
   // ═══════════════════════════════════════════════════════
   // SAHNE C1 — "Ethan yetişti"
@@ -322,7 +322,7 @@ const MESSAGES = [
   {"t": "msg", "f": "zoe", "at": "21:43", "txt": "Sanatçıymış"},
 
   {"t": "msg", "f": "zoe", "at": "21:44", "txt": "Ethan'a haber vermemiş"},
-  {"t": "msg", "f": "zoe", "at": "21:44", "txt": "Sürpriz yapacaktı"},
+  {"t": "msg", "f": "zoe", "at": "21:44", "txt": "Sonra sürpriz yapacakmış"},
 
   {"t": "msg", "f": "zoe", "at": "21:45", "txt": "Sergide karşılaşınca Ethan da şaşırmış"},
 
@@ -332,7 +332,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "21:46", "txt": "Yerin dibine geçtim resmen"},
 
-  {"t": "msg", "f": "zoe", "at": "21:47", "txt": "Eridim sokakta"},
+  {"t": "msg", "f": "zoe", "at": "21:47", "txt": "Rezil oldum"},
 
   // ═══════════════════════════════════════════════════════
   // SAHNE C3 — "Lena'nın tepkisi"
@@ -351,8 +351,7 @@ const MESSAGES = [
   {"t": "msg", "f": "zoe", "at": "21:51", "txt": "İki müşterimiz de oradaydı"},
   {"t": "msg", "f": "zoe", "at": "21:52", "txt": "Hepsi gördü"},
 
-  {"t": "msg", "f": "zoe", "at": "21:52", "txt": "Kalabalığın ortasında yere içkiler döküldü"},
-  {"t": "msg", "f": "zoe", "at": "21:53", "txt": "Ben Ethan'ın kuzenini terslemiştim"},
+  {"t": "msg", "f": "zoe", "at": "21:52", "txt": "Kalabalığın ortasında içkiler üstüme döküldü"},
 
   {"t": "msg", "f": "lena", "at": "21:53", "txt": "🙈", "gap": true},
 
@@ -362,6 +361,7 @@ const MESSAGES = [
   // SAHNE D1 — "Yatağa dönmüş"
   // ═══════════════════════════════════════════════════════
 
+  {"t": "silence", "x": "1.5 saat sonra"},
   {"t": "msg", "f": "zoe", "at": "23:32", "txt": "Lena uyanık mısın hâlâ", "gap": true},
 
   {"t": "msg", "f": "lena", "at": "23:32", "txt": "Bekliyorum seni", "gap": true},
@@ -395,7 +395,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "23:40", "txt": "Yarın iş arkadaşlarıma nasıl bakacağım kızlar"},
 
-  {"t": "msg", "f": "zoe", "at": "23:40", "txt": "Hep beraber gördü"},
+  {"t": "msg", "f": "zoe", "at": "23:40", "txt": "Hepsi gördü"},
 
   // ═══════════════════════════════════════════════════════
   // SAHNE D3 — "Foto'ya geri bakış"
@@ -431,23 +431,23 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "23:51", "txt": "İş dedi"},
 
-  {"t": "msg", "f": "zoe", "at": "23:52", "txt": "Bu sefer ben susasım geldi"},
+  {"t": "msg", "f": "zoe", "at": "23:52", "txt": "o kadar rezil oldum ki,"},
 
-  {"t": "msg", "f": "zoe", "at": "23:52", "txt": "Akşamdan sonra ne diyebilirdim"},
+  {"t": "msg", "f": "zoe", "at": "23:52", "txt": "Bir şey diyemedim"},
 
   {"t": "msg", "f": "lena", "at": "23:53", "txt": "Hmm", "gap": true},
 
   // ─── SEÇİM 5 ───
   {"t": "choice", "at": "23:54", "options": [
-    {"label": "A", "txt": "Önemli değil herkesin başına gelebilir", "set": {"you_after_shame": "optimism"}, "replies": [
-      {"f": "zoe", "at": "23:55", "txt": "İnşallah"},
+    {"label": "A", "txt": "Bu sadece bir yanlış anlaşılma, herkesin başına gelebilir", "set": {"you_after_shame": "optimism"}, "replies": [
+      {"f": "zoe", "at": "23:55", "txt": "Off bilemiyorum"},
       {"f": "zoe", "at": "23:55", "txt": "Uyumam lazım"},
       {"f": "lena", "at": "23:56", "txt": "Aynen yat"},
       {"f": "lena", "at": "23:56", "txt": "Yarın yeni gün"}
     ]},
     {"label": "B", "txt": "Uyu artık, yarın düşünürsün", "set": {"you_after_shame": "rest"}, "replies": [
       {"f": "zoe", "at": "23:55", "txt": "Haklısın"},
-      {"f": "zoe", "at": "23:55", "txt": "Beynim duramıyor zaten"},
+      {"f": "zoe", "at": "23:55", "txt": "Beynim durmuyor zaten"},
       {"f": "lena", "at": "23:56", "txt": "Zorla uyut kendini"},
       {"f": "lena", "at": "23:56", "txt": "Yat"}
     ]}

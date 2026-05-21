@@ -19,7 +19,7 @@ const MESSAGES = [
   {"t": "msg", "f": "zoe", "at": "07:47", "txt": "Mesaj bırakmış sadece"},
   {"t": "msg", "f": "zoe", "at": "07:47", "txt": "\"Akşama görüşürüz. Bir kaç şey halletmem lazım.\""},
 
-  {"t": "msg", "f": "lena", "at": "07:48", "txt": "Hmm"},
+  {"t": "msg", "f": "lena", "at": "07:48", "txt": "Hımm"},
 
   {"t": "msg", "f": "zoe", "at": "07:48", "txt": "Soğuk değil mi"},
 
@@ -34,18 +34,19 @@ const MESSAGES = [
   {"t": "msg", "f": "zoe", "at": "07:51", "txt": "Sabah uyandım"},
   {"t": "msg", "f": "zoe", "at": "07:52", "txt": "Uyanır uyanmaz Olivia'nın yüzü geldi gözümün önüne"},
 
-  {"t": "msg", "f": "zoe", "at": "07:52", "txt": "İş arkadaşlarıma nasıl bakacağım bugün"},
+  {"t": "msg", "f": "zoe", "at": "07:52", "txt": "İş arkadaşlarımın yüzüne nasıl bakacağım bugün"},
 
-  {"t": "msg", "f": "zoe", "at": "07:53", "txt": "Garsonun yüzü Lena"},
   {"t": "msg", "f": "zoe", "at": "07:53", "txt": "Garsonun yüzü gözümün önünde hâlâ"},
 
   {"t": "msg", "f": "lena", "at": "07:54", "txt": "Zoe canım sakin"},
 
   {"t": "msg", "f": "lena", "at": "07:54", "txt": "Olan oldu, bugün yeni bir gün"},
 
-  {"t": "msg", "f": "zoe", "at": "07:55", "txt": "Yeni gün ama aynı insanlar"},
+  {"t": "msg", "f": "zoe", "at": "07:55", "txt": "Yeni gün ama dünkü insanlar"},
 
   {"t": "msg", "f": "lena", "at": "07:55", "txt": "🙈"},
+
+  {"t": "msg", "f": "zoe", "at": "07:55", "txt": "Ethan'a nasıl cevap versem?", "gap": true},
 
   // ─── SEÇİM 1 ───
 
@@ -115,15 +116,15 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "10:14", "txt": "Kızlar", "gap": true},
 
-  {"t": "msg", "f": "zoe", "at": "10:14", "txt": "Amy \"iyi misin\" dedi yumuşak"},
+  {"t": "msg", "f": "zoe", "at": "10:14", "txt": "Amy \"günaydın\" dedi tatlı bir şekilde"},
 
-  {"t": "msg", "f": "zoe", "at": "10:15", "txt": "Chloe yüzüme bile bakmadı"},
+  {"t": "msg", "f": "zoe", "at": "10:15", "txt": "Chloe ilgilenmedi hiç"},
 
   {"t": "msg", "f": "lena", "at": "10:15", "txt": "Hmm"},
 
   {"t": "msg", "f": "zoe", "at": "10:16", "txt": "Chloe niye böyle bana"},
 
-  {"t": "msg", "f": "zoe", "at": "10:16", "txt": "Kesin sergideki halimden hoşlanmadı"},
+  {"t": "msg", "f": "zoe", "at": "10:16", "txt": "Kesin sergideki olaylar yüzünden"},
   {"t": "msg", "f": "zoe", "at": "10:17", "txt": "Müdüre bişey söylediler mi acaba"},
   {"t": "msg", "f": "zoe", "at": "10:17", "txt": "Amy de belki sahte sıcak davranıyor"},
 
@@ -148,21 +149,20 @@ const MESSAGES = [
   {"t": "msg", "f": "zoe", "at": "12:05", "txt": "Ama gözünün içine bakamadım kimsenin"},
 
   {"t": "msg", "f": "zoe", "at": "12:06", "txt": "Dün gece beni gördüler mi ki bilmiyorum"},
-  {"t": "msg", "f": "zoe", "at": "12:06", "txt": "Görse bile demez ama"},
-  {"t": "msg", "f": "zoe", "at": "12:07", "txt": "Düşündüğüm şey bu, demese bile düşündüğü"},
+  {"t": "msg", "f": "zoe", "at": "12:06", "txt": "Görsele bile söylemezler zaten"},
+  {"t": "msg", "f": "zoe", "at": "12:07", "txt": "Tüm gün düşündüğüm şey bu"},
 
   {"t": "msg", "f": "zoe", "at": "12:07", "txt": "Toplantıdan çıkar çıkmaz tuvalete gittim ağladım"},
 
   {"t": "msg", "f": "lena", "at": "12:08", "txt": "Ya Zoe"},
 
-  {"t": "msg", "f": "lena", "at": "12:08", "txt": "Ne diye \"müşteri beni gördü\" diye düşünüyorsun ki"},
 
   {"t": "msg", "f": "lena", "at": "12:09", "txt": "İnsanların kendi hayatları var"},
   {"t": "msg", "f": "lena", "at": "12:09", "txt": "Kimsenin seninle ilgilendiği yok şu an"},
 
   {"t": "msg", "f": "zoe", "at": "12:10", "txt": "Biliyorum mantıksız ama yine de…"},
 
-  {"t": "msg", "f": "lena", "at": "12:10", "txt": "Nefes nefes 🤍"},
+  {"t": "msg", "f": "lena", "at": "12:10", "txt": "Sakiin. Nefes al nefes ver 🤍"},
 
   // ─── B3 — Ethan DM ───
 
@@ -172,7 +172,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "lena", "at": "13:19", "txt": "Tatlı mesaj"},
 
-  {"t": "msg", "f": "zoe", "at": "13:19", "txt": "Ne yazayım, bilmiyorum"},
+  {"t": "msg", "f": "zoe", "at": "13:19", "txt": "Ne yazayım, bilmiyorum?"},
 
   // ─── SEÇİM 2 ───
 
@@ -183,10 +183,10 @@ const MESSAGES = [
     "options": [
       {
         "label": "A",
-        "txt": "İyiyim, akşam konuşuruz",
+        "txt": "Mesafeli yaz",
         "set": {"you_dm_advice": "distant"},
         "replies": [
-          {"f": "zoe", "at": "13:21", "txt": "\"İyiyim, akşam konuşuruz\" yazdım"},
+          {"f": "zoe", "at": "13:21", "txt": "\"İyiyim, akşam konuşuruz\" yaz"},
           {"f": "lena", "at": "13:22", "txt": "Tamam, mesafeli ama medeni"},
           {"f": "lena", "at": "13:22", "txt": "Doğru ton bu sabah için"}
         ]
@@ -204,7 +204,7 @@ const MESSAGES = [
       },
       {
         "label": "C",
-        "txt": "Olivia'ya yazmam lazım mı sence",
+        "txt": "Olivia konusunu aç",
         "set": {"you_dm_advice": "olivia_pivot"},
         "replies": [
           {"f": "zoe", "at": "13:21", "txt": "\"Olivia'ya yazmam lazım mı sence\" diye sordum"},
@@ -252,7 +252,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "lena", "at": "16:22", "txt": "Kızlar bir şey sorucam", "gap": true},
 
-  {"t": "msg", "f": "zoe", "at": "16:23", "txt": "E?"},
+  {"t": "msg", "f": "zoe", "at": "16:23", "txt": "Evet canım?"},
 
   {"t": "msg", "f": "lena", "at": "16:23", "txt": "Alex bütün gün cevap vermedi"},
 
@@ -264,7 +264,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "16:26", "txt": "Hmm"},
 
-  {"t": "msg", "f": "lena", "at": "16:30", "txt": "Şimdi yazdı", "gap": true},
+  {"t": "msg", "f": "lena", "at": "16:30", "txt": "Şimdi yazdı:", "gap": true},
 
   {"t": "msg", "f": "lena", "at": "16:31", "txt": "\"Kusura bakma çok yoğun geçti, akşam yazarım söz\""},
 
@@ -328,7 +328,6 @@ const MESSAGES = [
 
   {"t": "photo", "at": "21:35", "url": "../../_assets/episodes/ep05/images/s1e5_c_malik_story.jpg", "cap": ""},
 
-  {"t": "msg", "f": "lena", "at": "21:36", "txt": "..."},
 
   {"t": "msg", "f": "lena", "at": "21:36", "txt": "Dur"},
 
@@ -336,7 +335,6 @@ const MESSAGES = [
 
   {"t": "msg", "f": "lena", "at": "21:37", "txt": "Alex'in bahsettiği Sara"},
 
-  {"t": "msg", "f": "zoe", "at": "21:37", "txt": "..."},
 
   {"t": "msg", "f": "zoe", "at": "21:38", "txt": "Evet"},
 
@@ -388,13 +386,13 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "21:53", "txt": "Eee"},
 
-  {"t": "msg", "f": "lena", "at": "21:53", "txt": "Ethan'ı fake hesabımdan ekleyeli birkaç ay oldu"},
+  {"t": "msg", "f": "lena", "at": "21:53", "txt": "Siz Ethanla tanıştığınızda ben onu fake hesabımdan eklemiştim. Merak ettiğim için"},
 
   {"t": "msg", "f": "zoe", "at": "21:54", "txt": "Ne"},
 
   {"t": "msg", "f": "lena", "at": "21:54", "txt": "Söylemedim çünkü gereksiz olur sandım"},
 
-  {"t": "msg", "f": "lena", "at": "21:55", "txt": "Ama bugün baktım"},
+  {"t": "msg", "f": "lena", "at": "21:55", "txt": "Geçen gün Sara'yı eklemiştim ya"},
 
   {"t": "msg", "f": "lena", "at": "21:55", "txt": "Sara son 2 haftada Ethan'ın 3 paylaşımına beğeni atmış"},
 
@@ -409,7 +407,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "lena", "at": "21:59", "txt": "Olabilir"},
 
-  {"t": "msg", "f": "lena", "at": "21:59", "txt": "Ama bir tuhaflık var dipte"},
+  {"t": "msg", "f": "lena", "at": "21:59", "txt": "Ama bir tuhaflık var olabilir"},
 
   // ─── SEÇİM 4 ───
 
@@ -449,13 +447,12 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "22:48", "txt": "Ethan'a yazsam saçma mı", "gap": true},
 
-  {"t": "msg", "f": "zoe", "at": "22:49", "txt": "Direkt soramam, çok cesaretli olur"},
+  {"t": "msg", "f": "zoe", "at": "22:49", "txt": "Direkt soramam, çok açık olur"},
 
-  {"t": "msg", "f": "zoe", "at": "22:49", "txt": "Yan yoldan bir şey sorabilirim"},
+  {"t": "msg", "f": "zoe", "at": "22:49", "txt": "Daha dolaylı sorabilirim belki"},
 
-  {"t": "msg", "f": "lena", "at": "22:50", "txt": "Ne sorarsın"},
 
-  {"t": "msg", "f": "zoe", "at": "22:50", "txt": "Kararsızım kızlar"},
+  {"t": "msg", "f": "zoe", "at": "22:50", "txt": "Ama bilmiyorum nasıl sorsam?"},
 
   // ─── SEÇİM 5 + C5 Cliffhanger ───
 

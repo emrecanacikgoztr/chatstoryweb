@@ -28,14 +28,14 @@ const CONFIG = {
     zoe_dm: {
       name:       'Zoe',
       initial:    'Z',
-      avatar:     'zoe.jpg',
+      avatar:     '../../_assets/characters/profile_pics/zoe.jpg',
       color:      '#d4845a',
       bgTint:     'radial-gradient(ellipse 90% 55% at 50% 0%, rgba(212,132,90,.10), transparent 70%)',
     },
     lena_dm: {
       name:       'Lena',
       initial:    'L',
-      avatar:     'lena.jpg',
+      avatar:     '../../_assets/characters/profile_pics/lena.jpg',
       color:      '#888888',
       bgTint:     'radial-gradient(ellipse 90% 55% at 50% 0%, rgba(255,255,255,.04), transparent 70%)',
     },
@@ -61,7 +61,7 @@ const CONFIG = {
       color:    '#d4845a',
       bgColor:  'rgba(212,132,90,.15)',
       bubbleBg: '#1c1814',
-      avatar:   'lena.jpg',
+      avatar:   '../../_assets/characters/profile_pics/lena.jpg',
     },
 
     zoe: {
@@ -71,7 +71,7 @@ const CONFIG = {
       color:    '#7b9ec9',
       bgColor:  'rgba(123,158,201,.15)',
       bubbleBg: '#131820',
-      avatar:   'zoe.jpg',
+      avatar:   '../../_assets/characters/profile_pics/zoe.jpg',
     },
 
     you: {
