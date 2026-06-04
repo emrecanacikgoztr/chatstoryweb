@@ -10,7 +10,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "07:02", "txt": "Kızlar günaydın"},
 
-  {"t": "msg", "f": "zoe", "at": "07:03", "txt": "Ethan gece gelmiş ama erken çıkmış"},
+  {"t": "msg", "f": "zoe", "at": "07:03", "txt": "Ethan gece geç geldi, sabah Zürih uçuşu için erken çıkmış"},
 
   {"t": "msg", "f": "lena", "at": "07:04", "txt": "Aaa görüşemediniz mi"},
 
@@ -20,7 +20,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "07:05", "txt": "\"Sabah erken çıktım, mesajlaşırız canım 🤍\""},
 
-  {"t": "msg", "f": "lena", "at": "07:06", "txt": "Mesajda anlatacakmış demek"},
+  {"t": "msg", "f": "lena", "at": "07:06", "txt": "Varınca yazar demek"},
   {"t": "msg", "f": "lena", "at": "07:06", "txt": "Bekleyelim ne yazacak"},
 
   {"t": "msg", "f": "zoe", "at": "07:07", "txt": "Dün gece kafamda neler döndü"},
@@ -38,9 +38,9 @@ const MESSAGES = [
 
   {"t": "msg", "f": "lena", "at": "07:13", "txt": "Hem de detaylı"},
 
-  {"t": "msg", "f": "zoe", "at": "07:13", "txt": "Zürih ya, iş seyahati"},
+  {"t": "msg", "f": "zoe", "at": "07:13", "txt": "Konferansı biliyordum zaten"},
 
-  {"t": "msg", "f": "zoe", "at": "07:14", "txt": "Aklımdan çıkmış"},
+  {"t": "msg", "f": "zoe", "at": "07:14", "txt": "Sadece gece hiç ses çıkmaması içime oturmuştu"},
 
   {"t": "msg", "f": "lena", "at": "07:14", "txt": "Şarj bitmesi de açıklıyor cevap atmamasını"},
 
