@@ -11,9 +11,6 @@ const MESSAGES = [
   {"t": "photo", "f": "lena", "at": "19:24", "url": "../../_assets/episodes/ep02/images/s1e2_a_lena_navy.jpg", "cap": "Lacivert olanı"},
   {"t": "photo", "f": "lena", "at": "19:24", "url": "../../_assets/episodes/ep02/images/s1e2_a_lena_burgundy.jpg", "cap": "Bordo olanı"},
   {"t": "msg", "f": "lena", "at": "19:25", "txt": "Hangisi??", "gap": true},
-  {"t": "msg", "f": "zoe", "at": "19:25", "txt": "İkisi de güzel ya", "gap": true},
-  {"t": "msg", "f": "lena", "at": "19:25", "txt": "Bana yardım et", "gap": true},
-  {"t": "msg", "f": "zoe", "at": "19:25", "txt": "Hımm", "gap": true},
   {"t": "choice", "at": "19:25", "options": [
     {"label": "A", "txt": "Lacivert elbise", "set": {"dress": "navy"}, "replies": [
       {"f": "lena", "at": "19:25", "txt": "Lacivert"},
@@ -51,7 +48,7 @@ const MESSAGES = [
       {"f": "lena", "at": "19:31", "txt": "Abartıya gerek yok"},
       {"f": "zoe", "at": "19:32", "txt": "İyi seçim"}
     ]},
-    {"label": "B", "txt": "Büyük küpe, büyükannenden", "set": {"earring": "grandma"}, "replies": [
+    {"label": "B", "txt": "Büyük küpe, büyükannenden", "set": {"earring": "vintage"}, "replies": [
       {"f": "lena", "at": "19:31", "txt": "O küpeler büyükannemden kalmıştı"},
       {"f": "lena", "at": "19:32", "txt": "Şans getirirler bana"},
       {"f": "zoe", "at": "19:32", "txt": "🥹"}
