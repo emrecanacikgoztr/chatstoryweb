@@ -261,9 +261,9 @@ const MESSAGES = [
 
   {"t": "msg", "f": "lena", "at": "00:26", "txt": "Bir de bu", "gap": true},
 
-  {"t": "photo", "f": "lena", "at": "00:26", "url": "../../_assets/episodes/ep03/images/s1e3_c_sara_outfit.jpg", "cap": "Outfit postu"},
+  {"t": "photo", "f": "lena", "at": "00:26", "url": "../../_assets/episodes/ep03/images/s1e3_c_sara_outfit.jpg", "cap": "Quiet luxury"},
 
-  {"t": "msg", "f": "lena", "at": "00:27", "txt": "\"Quiet luxury\" yazmış caption'da", "gap": true},
+  {"t": "msg", "f": "lena", "at": "00:27", "txt": "Caption'a bak sen 😂", "gap": true},
 
   {"t": "msg", "f": "zoe", "at": "00:27", "txt": "😂", "gap": true},
   {"t": "msg", "f": "zoe", "at": "00:28", "txt": "Saatler harcıyordur böyle bir foto için"},
@@ -274,9 +274,9 @@ const MESSAGES = [
 
   {"t": "msg", "f": "lena", "at": "00:28", "txt": "Ve bu", "gap": true},
 
-  {"t": "photo", "f": "lena", "at": "00:28", "url": "../../_assets/episodes/ep03/images/s1e3_c_sara_nature.jpg", "cap": "Doğa yürüyüşü"},
+  {"t": "photo", "f": "lena", "at": "00:28", "url": "../../_assets/episodes/ep03/images/s1e3_c_sara_nature.jpg", "cap": "Deep breaths only"},
 
-  {"t": "msg", "f": "lena", "at": "00:29", "txt": "\"Deep breaths only\" 😂", "gap": true},
+  {"t": "msg", "f": "lena", "at": "00:29", "txt": "Yine aynı kafa 😂", "gap": true},
 
   {"t": "msg", "f": "zoe", "at": "00:29", "txt": "Hep aynı caption'lar", "gap": true},
 
@@ -300,7 +300,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "lena", "at": "00:31", "txt": "Bir tane daha var", "gap": true},
 
-  {"t": "photo", "f": "lena", "at": "00:31", "url": "../../_assets/episodes/ep03/images/s1e3_c_sara_hoodie.jpg", "cap": "Yeni paylaşım"},
+  {"t": "photo", "f": "lena", "at": "00:31", "url": "../../_assets/episodes/ep03/images/s1e3_c_sara_hoodie.jpg", "cap": "Cozy szn"},
 
   {"t": "msg", "f": "zoe", "at": "00:32", "txt": "Aaa", "gap": true},
 
@@ -340,6 +340,10 @@ const MESSAGES = [
   {"t": "msg", "f": "lena", "at": "00:38", "txt": "Çok güzeldi gerçekten", "gap": true},
   {"t": "msg", "f": "lena", "at": "00:39", "txt": "Sana da iyi geceler"},
 
-  {"t": "msg", "f": "zoe", "at": "00:39", "txt": "İyi geceler 🤍", "gap": true},
+  {"t": "msg", "f": "zoe", "at": "00:40", "txt": "Yine de şu hoodie aklımdan çıkmadı ya", "gap": true},
+
+  {"t": "msg", "f": "zoe", "at": "00:40", "txt": "Neyse, abartmayayım"},
+
+  {"t": "msg", "f": "zoe", "at": "00:40", "txt": "İyi geceler 🤍"},
 
 ];

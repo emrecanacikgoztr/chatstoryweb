@@ -12,7 +12,7 @@ const MESSAGES = [
   {"t": "msg", "f": "zoe", "at": "07:07", "txt": "Dün gece ne kabuslar gördüm. Hiç güzel değildi"},
   {"t": "msg", "f": "zoe", "at": "07:08", "txt": "Bir saniye"},
   {"t": "msg", "f": "zoe", "at": "07:09", "txt": "Şimdi yazdı"},
-  {"t": "msg", "f": "zoe", "at": "07:11", "txt": "\"Üzgünüm canım şarjım bitmişti. Sabah 07:00 de uçağım vardı Zürih'e, bahsetmiştim hafta sonu konferansı. Seni uyandırmak istemedim. Pazartesi dönerim, dönünce özel bir şey yapacağız aşkım.\""},
+  {"t": "msg", "f": "zoe", "at": "07:11", "txt": "\"Üzgünüm canım şarjım bitmişti. Sabah 06:00'da uçağım vardı Zürih'e, bahsetmiştim hafta sonu konferansı. Seni uyandırmak istemedim. Pazartesi dönerim, dönünce özel bir şey yapacağız aşkım.\""},
   {"t": "msg", "f": "lena", "at": "07:12", "txt": "Aaa"},
   {"t": "msg", "f": "lena", "at": "07:12", "txt": "Hadi bakalım"},
   {"t": "msg", "f": "zoe", "at": "07:13", "txt": "Konferansı biliyordum zaten"},
@@ -103,7 +103,7 @@ const MESSAGES = [
     "options": [
       {
         "label": "A",
-        "txt": "Alexin hatası, arada yazabilirdi",
+        "txt": "Alex'in hatası, arada yazabilirdi",
         "replies": [
           {"f": "lena", "at": "14:13", "txt": "Evet ya"},
           {"f": "lena", "at": "14:14", "txt": "Ama çok tatlıydı konuşurken"},
@@ -143,7 +143,7 @@ const MESSAGES = [
   {"t": "msg", "f": "lena", "at": "21:22", "txt": "Restorandayız"},
   {"t": "msg", "f": "zoe", "at": "21:23", "txt": "Süper"},
   {"t": "msg", "f": "zoe", "at": "21:23", "txt": "Ben evdeyim sıkıldım"},
-  {"t": "msg", "f": "zoe", "at": "21:26", "txt": "Insta'da geziniyorum"},
+  {"t": "msg", "f": "zoe", "at": "21:25", "txt": "Insta'da geziniyorum"},
   {"t": "msg", "f": "zoe", "at": "21:25", "txt": "Olivia ile ekleştik"},
   {"t": "msg", "f": "lena", "at": "21:25", "txt": "Haa Ethan'ın kuzeni Olivia mı"},
   {"t": "msg", "f": "zoe", "at": "21:26", "txt": "Evet, sergide kıskanıp ortalığı dağıttığım kişi 🙈"},
@@ -214,7 +214,7 @@ const MESSAGES = [
   {"t": "msg", "f": "zoe", "at": "22:12", "txt": "\"Bitkinim aşkım, yatıyorum artık 🤍\" dedi"},
   {"t": "msg", "f": "lena", "at": "22:13", "txt": "Hımm"},
   {"t": "msg", "f": "lena", "at": "22:14", "txt": "Kızlar Alex tuvalete gitti, kaçamak telefona baktım", "gap": true},
-  {"t": "msg", "f": "lena", "at": "22:14", "txt": "Sara demin bir story daha atmış, atıyorum bakın"},
+  {"t": "msg", "f": "lena", "at": "22:14", "txt": "Sara demin bir story daha atmış"},
   {"t": "photo", "f": "lena", "at": "22:14", "url": "../../_assets/episodes/ep06/images/s1e6_c_sara_dinner.jpg"},
   {
     "t": "choice",

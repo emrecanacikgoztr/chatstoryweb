@@ -460,6 +460,10 @@ const MESSAGES = [
   {"t": "msg", "f": "zoe", "at": "23:58", "txt": "Yatıyorum", "gap": true},
   {"t": "msg", "f": "zoe", "at": "23:58", "txt": "Ethan duştan çıkıyor şimdi"},
 
+  {"t": "msg", "f": "zoe", "at": "23:59", "txt": "Artık eskisi gibi her şeyi sorgulamıyorum"},
+
+  {"t": "msg", "f": "zoe", "at": "23:59", "txt": "Ama içimde bir şey de tam oturmuyor"},
+
   {"t": "msg", "f": "lena", "at": "23:59", "txt": "Yat sen de", "gap": true},
 
   {"t": "msg", "f": "zoe", "at": "00:00", "txt": "İyi geceler 🤍", "gap": true},

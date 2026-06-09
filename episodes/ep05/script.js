@@ -17,7 +17,7 @@ const MESSAGES = [
   {"t": "msg", "f": "lena", "at": "07:46", "txt": "Aaa"},
 
   {"t": "msg", "f": "zoe", "at": "07:47", "txt": "Mesaj bırakmış sadece"},
-  {"t": "msg", "f": "zoe", "at": "07:47", "txt": "\"Akşama görüşürüz. Bir kaç şey halletmem lazım.\""},
+  {"t": "msg", "f": "zoe", "at": "07:47", "txt": "\"Akşama görüşürüz. Birkaç şey halletmem lazım.\""},
 
   {"t": "msg", "f": "lena", "at": "07:48", "txt": "Hımm"},
 
@@ -92,9 +92,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "08:32", "txt": "Taksideyim", "gap": true},
 
-  {"t": "msg", "f": "zoe", "at": "08:33", "txt": "Bakın halime"},
-
-  {"t": "photo", "at": "08:33", "url": "../../_assets/episodes/ep05/images/s1e5_a_zoe_morning.jpg", "cap": ""},
+  {"t": "photo", "at": "08:33", "url": "../../_assets/episodes/ep05/images/s1e5_a_zoe_morning.jpg", "cap": "Sabahın bu hali 🫠"},
 
   {"t": "msg", "f": "lena", "at": "08:34", "txt": "Ya hep güzelsin sen"},
 
@@ -162,7 +160,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "12:10", "txt": "Biliyorum mantıksız ama yine de…"},
 
-  {"t": "msg", "f": "lena", "at": "12:10", "txt": "Sakiin. Nefes al nefes ver 🤍"},
+  {"t": "msg", "f": "lena", "at": "12:10", "txt": "Sakin. Nefes al nefes ver"},
 
   // ─── B3 — Ethan DM ───
 
@@ -231,9 +229,7 @@ const MESSAGES = [
 
   {"t": "msg", "f": "zoe", "at": "13:45", "txt": "Sahibi koşarak çağırıyor 😂"},
 
-  {"t": "msg", "f": "zoe", "at": "13:45", "txt": "Yeni arkadaşıma bakın"},
-
-  {"t": "photo", "at": "13:46", "url": "../../_assets/episodes/ep05/images/s1e5_b_dog.jpg", "cap": ""},
+  {"t": "photo", "at": "13:46", "url": "../../_assets/episodes/ep05/images/s1e5_b_dog.jpg", "cap": "Yeni arkadaşım 🥹"},
 
   {"t": "msg", "f": "lena", "at": "13:46", "txt": "Aaaa"},
 
@@ -250,7 +246,7 @@ const MESSAGES = [
 
   // ─── B5 — Lena Alex sıkıntısı ───
 
-  {"t": "msg", "f": "lena", "at": "16:22", "txt": "Kızlar bir şey sorucam", "gap": true},
+  {"t": "msg", "f": "lena", "at": "16:22", "txt": "Kızlar bir şey soracağım", "gap": true},
 
   {"t": "msg", "f": "zoe", "at": "16:23", "txt": "Evet canım?"},
 
@@ -395,6 +391,8 @@ const MESSAGES = [
   {"t": "msg", "f": "lena", "at": "21:55", "txt": "Geçen gün de Sara'yı eklemiştim ya"},
 
   {"t": "msg", "f": "lena", "at": "21:55", "txt": "Sara son 2 haftada Ethan'ın 3 paylaşımı beğenmiş"},
+
+  {"t": "msg", "f": "lena", "at": "21:55", "txt": "Daha önce hiç beğenmemişti, geriye baktım"},
 
   {"t": "msg", "f": "zoe", "at": "21:56", "txt": "Hmm"},
 
