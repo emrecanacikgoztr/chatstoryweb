@@ -248,7 +248,7 @@ const ChatStory = (() => {
     { num:'04', slug:'ep04', title:"Sara",                    done:false },
     { num:'05', slug:'ep05', title:"Çok Tatlı",               done:false },
     { num:'06', slug:'ep06', title:"Fotoğraf",                done:false },
-    { num:'07', slug:'ep07', title:"İş Seyahati",             done:false },
+    { num:'07', slug:'ep07', title:"Eve Dönüş",               done:true  },
     { num:'08', slug:'ep08', title:"Dönüş",                   done:false },
     { num:'09', slug:'ep09', title:"Lena'nın Sorusu",         done:false },
     { num:'10', slug:'ep10', title:"Her Şey Yolunda",         done:false },

@@ -109,6 +109,8 @@ const MESSAGES = [
   // SAHNE B0 — "Sergide bağlam (köprü mesajla başlıyor)"
   // ═══════════════════════════════════════════════════════
 
+  {"t": "silence", "x": "1.5 saat sonra"},
+
   {"t": "msg", "f": "lena", "at": "20:33", "txt": "Kızlar nasıl gidiyor", "gap": true},
   {"t": "msg", "f": "lena", "at": "20:33", "txt": "Nasıl gidiyor"},
 
