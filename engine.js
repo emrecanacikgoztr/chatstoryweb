@@ -249,14 +249,13 @@ const ChatStory = (() => {
     { num:'05', slug:'ep05', title:"Çok Tatlı",               done:false },
     { num:'06', slug:'ep06', title:"Fotoğraf",                done:false },
     { num:'07', slug:'ep07', title:"Eve Dönüş",               done:true  },
-    { num:'08', slug:'ep08', title:"Dönüş",                   done:false },
-    { num:'09', slug:'ep09', title:"Lena'nın Sorusu",         done:false },
-    { num:'10', slug:'ep10', title:"Her Şey Yolunda",         done:false },
-    { num:'11', slug:'ep11', title:"Ekran Görüntüsü",         done:false },
-    { num:'12', slug:'ep12', title:"Sorma Bana",              done:false },
-    { num:'13', slug:'ep13', title:"Ethan Çok Tatlı",          done:false },
-    { num:'14', slug:'ep14', title:"Son İpucu",               done:false },
-    { num:'15', slug:'ep15', title:"Biliyordum",              done:false },
+    { num:'08', slug:'ep08', title:"Lena'nın Sorusu",         done:true  },
+    { num:'09', slug:'ep09', title:"Her Şey Yolunda",         done:true  },
+    { num:'10', slug:'ep10', title:"Screenshot",              done:true  },
+    { num:'11', slug:'ep11', title:"Sara'nın Mesajı",         done:true  },
+    { num:'12', slug:'ep12', title:"Coffee",                   done:true  },
+    { num:'13', slug:'ep13', title:"Ethan Çok Tatlı",          done:true  },
+    { num:'14', slug:'ep14', title:"Biliyordum",              done:true  },  // SEZON FİNALİ (tek final)
   ];
 
   function renderEpisodePanel(){
@@ -335,6 +334,22 @@ const ChatStory = (() => {
       saved[msgIdx]=newTxt;
       localStorage.setItem(lsKey(),JSON.stringify(saved));
     } catch(e){}
+  }
+
+  // ── PERSISTENT (cross-episode) STATE ──
+  // Choice set values persist across episodes via localStorage, so a kalıcı
+  // dallanma (e.g. you_lena_told set in EP8) is readable by showIf/skipIf in EP9+.
+  const PSTATE_KEY = 'chatstory_pstate';
+  function loadPersistedState() {
+    try { return JSON.parse(localStorage.getItem(PSTATE_KEY)||'{}'); }
+    catch(e){ return {}; }
+  }
+  function persistState() {
+    try { localStorage.setItem(PSTATE_KEY, JSON.stringify(_state)); }
+    catch(e){}
+  }
+  function clearPersistedState() {
+    try { localStorage.removeItem(PSTATE_KEY); _state={}; } catch(e){}
   }
 
   // ── DOWNLOAD SCRIPT ──
@@ -602,6 +617,7 @@ const ChatStory = (() => {
         // Set state if defined: opt.set = {dress:'navy'} etc.
         if(opt.set){
           Object.assign(_state, opt.set);
+          persistState();  // cross-episode kalıcı dallanma
         }
 
         // Reset panel to empty state
@@ -903,7 +919,7 @@ body.show-chips .dev-msg-idx{display:inline-block;}
   }
 
   // ── START ──
-  function start() { _idx=0; _paused=false; _rendered=[]; _state={}; _choiceActive=false; loadSavedEdits(); next(); }
+  function start() { _idx=0; _paused=false; _rendered=[]; _state=loadPersistedState(); _choiceActive=false; loadSavedEdits(); next(); }
 
   return { init, start };
 
